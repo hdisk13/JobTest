@@ -1,4 +1,18 @@
 (function () {
+  (function sitSplit() {
+    if (new URLSearchParams(window.location.search).get("split") !== "1") return;
+    document.body.classList.add("is-split");
+    var sitting = document.querySelector("[data-sitting]");
+    if (sitting) sitting.textContent = "Phone split";
+    var phone = document.querySelector(".phone");
+    if (phone && !phone.querySelector(".sticker")) {
+      var sticker = document.createElement("p");
+      sticker.className = "sticker";
+      sticker.textContent = "JobTest sitting plan, not official AP admin";
+      phone.insertBefore(sticker, phone.firstChild);
+    }
+  })();
+
   const page = document.querySelector(".phone.speed-grid");
   const walk = document.getElementById("walk");
   const tryCard = document.getElementById("try");
@@ -16,14 +30,24 @@
   let remaining = 5 * 60;
   let ticking = false;
 
+  function reveal(el) {
+    if (!el) return;
+    el.classList.remove("is-hidden");
+    el.removeAttribute("hidden");
+    el.hidden = false;
+    el.disabled = false;
+    el.setAttribute("aria-hidden", "false");
+  }
+
   function paintClock() {
+    if (!clock) return;
     const minutes = Math.floor(remaining / 60);
     const seconds = remaining % 60;
     clock.textContent = minutes + ":" + String(seconds).padStart(2, "0");
   }
 
   function startClock() {
-    if (ticking) return;
+    if (ticking || !clock) return;
     ticking = true;
     remaining = 5 * 60;
     paintClock();
@@ -46,13 +70,12 @@
       section.hidden = !on;
       section.classList.toggle("is-hidden", !on);
     });
-    page.setAttribute("data-beat", beat);
+    if (page) page.setAttribute("data-beat", beat);
     if (beat === "live") {
-      footMore.textContent = "↓ more below";
-      partNext.hidden = false;
-      partNext.classList.remove("is-hidden");
-      clockRow.hidden = false;
+      if (footMore) footMore.textContent = "↓ more below";
+      reveal(clockRow);
       startClock();
+      reveal(partNext);
     }
   }
 
@@ -103,4 +126,15 @@
     if (tryNext.disabled) return;
     show(grid, "live");
   });
+
+  if (partNext) {
+    partNext.addEventListener("click", function (event) {
+      if (partNext.hidden || partNext.classList.contains("is-hidden")) {
+        event.preventDefault();
+        return;
+      }
+      event.preventDefault();
+      window.location.href = "mix.html";
+    });
+  }
 })();
