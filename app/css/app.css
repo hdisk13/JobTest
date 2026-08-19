@@ -379,32 +379,6 @@ button {
   margin-top: 2px;
 }
 
-/* Reserved: first-door kicker + dashed chip. Unused until a sourced SOC door exists. */
-.start-by {
-  margin-top: 10px;
-  color: #8a8490;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.cert-chip {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 7px 10px;
-  border: 1.5px dashed var(--ink);
-  border-radius: 8px;
-  color: var(--ink);
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.cert-chip strong {
-  display: inline;
-  font-size: 12px;
-}
-
 .empty-step {
   margin-top: 10px;
   color: #8a8490;
