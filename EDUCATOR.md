@@ -8,24 +8,26 @@ Implement, in this order: Option 3 administration → official score pipeline �
 
 ## Parts (admin order, working time)
 
-| # | Part | Items | Time | Type | Notes | Ability |
-| --- | --- | ---: | ---: | --- | --- | --- |
-| 1 | Arithmetic Reasoning | 18 | 20 min | Power | Word problems | AR |
-| 2 | Vocabulary | 19 | 8 min | Power | | VA |
-| 3 | Three-Dimensional Space | 20 | 8 min | Power | 3D figures | SA |
-| 4 | Computation | 40 | 6 min | Speeded | −1/4 per wrong | CM |
-| 5 | Name Comparison | 90 | 6 min | Speeded | −1 per wrong | CP |
-| 6 | Object Matching | 42 | 5 min | Speeded | −1/3 per wrong | FP |
-| 7 | Mark Making | — | — | Skip | Paper psychomotor | MC |
-| 8–9 | Place + Turn | — | — | Skip | Pegboard | MD |
-| 10–11 | Assemble + Disassemble | — | — | Skip | Finger board | FD |
+| # | Part | Items | Time | Type | Item UI | Notes | Ability |
+| --- | --- | ---: | ---: | --- | --- | --- | --- |
+| 1 | Arithmetic Reasoning | 18 | 20 min | Power | 5-choice, including “none of these” | Word problems | AR |
+| 2 | Vocabulary | 19 | 8 min | Power | Pick TWO of four words (synonym or antonym pair) | | VA |
+| 3 | Three-Dimensional Space | 20 | 8 min | Power | 3D figures | | SA |
+| 4 | Computation | 40 | 6 min | Speeded | 5-choice, including “none of these” | −1/4 per wrong | CM |
+| 5 | Name Comparison | 90 | 6 min | Speeded | Same / Different | −1 per wrong | CP |
+| 6 | Object Matching | 42 | 5 min | Speeded | | −1/3 per wrong | FP |
+| 7 | Mark Making | — | — | Skip | | Paper psychomotor | MC |
+| 8–9 | Place + Turn | — | — | Skip | | Pegboard | MD |
+| 10–11 | Assemble + Disassemble | — | — | Skip | | Finger board | FD |
 
 Rules:
 
 - Blanks are never penalized.
 - Power tests (Parts 1–3): no wrong-answer penalty.
 - Administer Parts 1–6 in that order (power before speed).
-- Two sittings: Parts 1–3, then Parts 4–6.
+- Official AP is **one sitting**, with a 5-minute break after Part 3 (AM VI.18). It is not two sessions.
+- Official practice items before each part are required (AM III.4–III.5).
+- Instruction overhead is about 5–10 minutes per part.
 
 ## Scoring
 
@@ -60,6 +62,8 @@ Interests / Holland are a separate tool. Do not invent a new matcher.
 - Item text, figures, and keys
 - Verbatim item scripts (AM III.1)
 - Official times — no extra time on speeded Parts 4–6
+- Official practice items before each part (AM III.4–III.5)
+- One sitting with a 5-minute break after Part 3 (AM VI.18)
 - Official penalties + equating + 2010 linker
 - Age 16+ / ~6th-grade English
 - Career-exploration only
@@ -77,7 +81,23 @@ Interests / Holland are a separate tool. Do not invent a new matcher.
 
 Speeded parts: prefer a full-grid facsimile, not one-item-at-a-time.
 
+### UI item types
+
+- Parts 1 and 4: 5-choice, including “none of these.”
+- Part 2 Vocabulary: pick TWO of four words (synonym or antonym pair).
+- Part 5: Same / Different.
+- Official practice items before each part are required (AM III.4–III.5).
+- Instruction overhead is about 5–10 minutes per part.
+
 Unproctored phone is a validity gap (UG p. 12). Disclose it. Do not advertise “official AP scores.”
+
+### JobTest sitting plan, not official AP admin
+
+A phone split (Parts 1–3, then Parts 4–6) is a **JobTest sitting plan, not official AP admin**. Official AP is one sitting with a 5-minute break after Part 3 (AM VI.18).
+
+- A split sitting must not claim official AP validity.
+- Never split a timed part.
+- Interrupted official admin = void (ATM p. 46).
 
 ## Youth copy
 
@@ -87,7 +107,6 @@ Unproctored phone is a validity gap (UG p. 12). Disclose it. Do not advertise �
 - “50 is typical for working adults. Higher is not better at life.”
 - Jobs: “Jobs that use your mix.”
 - Default teens to the Future zone.
-- Two sittings: Parts 1–3, then Parts 4–6.
 
 ## License
 
