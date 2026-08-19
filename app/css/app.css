@@ -489,6 +489,42 @@ button {
   line-height: 0.86;
 }
 
+.phone.start {
+  padding-top: 36px;
+  padding-bottom: 40px;
+}
+
+.wordmark {
+  margin: 0;
+  color: var(--teal);
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.9;
+  text-transform: lowercase;
+}
+
+.title-start {
+  margin-top: 22px;
+  font-size: 46px;
+}
+
+.start-copy {
+  max-width: 22em;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.start .notice {
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.start .cta {
+  margin-top: 8px;
+}
+
 .notice {
   margin: 18px 0 22px;
   padding: 16px 16px 14px;
