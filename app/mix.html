@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your mix · JobTest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Unbounded:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="phone">
+      <p class="kicker teal">Character sheet</p>
+      <h1 class="display title-mix">Your mix</h1>
+      <p class="lede">
+        50 is typical for working adults. Higher is not better at life.
+      </p>
+      <section class="sheet abilities">
+        <article class="ability">
+          <div>
+            <div class="name-row"><h3>Verbal Ability</h3></div>
+            <p>Words. How well you catch meaning and use it.</p>
+          </div>
+          <div class="score">72</div>
+          <div class="bar"><span style="width: 72%"></span></div>
+        </article>
+        <article class="ability">
+          <div>
+            <div class="name-row"><h3>Arithmetic Reasoning</h3></div>
+            <p>Word-problem math. Figuring out which math to use.</p>
+          </div>
+          <div class="score">58</div>
+          <div class="bar"><span style="width: 58%"></span></div>
+        </article>
+        <article class="ability">
+          <div>
+            <div class="name-row"><h3>Computation</h3></div>
+            <p>Fast, accurate arithmetic.</p>
+          </div>
+          <div class="score">41</div>
+          <div class="bar"><span style="width: 41%"></span></div>
+        </article>
+        <article class="ability">
+          <div>
+            <div class="name-row">
+              <h3>Spatial Ability</h3>
+              <span class="badge">Highest</span>
+            </div>
+            <p>Seeing 3D from a flat picture.</p>
+          </div>
+          <div class="score">88</div>
+          <div class="bar lime"><span style="width: 88%"></span></div>
+        </article>
+        <article class="ability">
+          <div>
+            <div class="name-row">
+              <h3>Form Perception</h3>
+              <span class="badge teal">2nd</span>
+            </div>
+            <p>Spotting tiny differences in shapes.</p>
+          </div>
+          <div class="score">79</div>
+          <div class="bar lime"><span style="width: 79%"></span></div>
+        </article>
+        <article class="ability">
+          <div>
+            <div class="name-row">
+              <h3>Clerical Perception</h3>
+              <span class="badge ink">Lowest</span>
+            </div>
+            <p>Spotting tiny differences in names and numbers.</p>
+          </div>
+          <div class="score">34</div>
+          <div class="bar"><span style="width: 34%"></span></div>
+        </article>
+      </section>
+
+      <section class="section jobs" id="jobs" data-view="future">
+        <div class="section-head">
+          <div>
+            <h2>Jobs that use your mix</h2>
+            <p class="section-copy">
+              <span id="zone">Zone 4 · Considerable prep</span><br />
+              Same mix of strengths — not jobs you already qualify for.
+            </p>
+          </div>
+          <div class="toggle" role="tablist">
+            <button type="button" data-view="current">Current</button>
+            <button type="button" class="is-on" data-view="future">Future</button>
+          </div>
+        </div>
+        <div class="job-list future">
+          <article class="job">
+            <strong>Architects</strong>
+            <span class="badge">Very strong</span>
+          </article>
+          <article class="job">
+            <strong>Graphic Designers</strong>
+            <span class="badge">Very strong</span>
+          </article>
+          <article class="job">
+            <strong>Industrial Engineers</strong>
+            <span class="badge teal">Strong</span>
+          </article>
+          <article class="job">
+            <strong>Interior Designers</strong>
+            <span class="badge paper">Good</span>
+          </article>
+        </div>
+        <div class="job-list current">
+          <article class="job">
+            <strong>Drafters</strong>
+            <span class="badge">Very strong</span>
+          </article>
+          <article class="job">
+            <strong>Surveying Technicians</strong>
+            <span class="badge teal">Strong</span>
+          </article>
+          <article class="job">
+            <strong>Civil Engineering Techs</strong>
+            <span class="badge teal">Strong</span>
+          </article>
+          <article class="job">
+            <strong>Photographers</strong>
+            <span class="badge paper">Good</span>
+          </article>
+        </div>
+      </section>
+
+      <div class="stickers">
+        <aside class="blurb lime">
+          This is for exploring, not for getting hired. Results must not be used
+          for employment or hiring decisions.
+        </aside>
+        <aside class="blurb paper">
+          <strong>6 of 9 abilities.</strong> Hands-and-fingers scores were
+          skipped. Those need real objects, not a phone.
+        </aside>
+      </div>
+      <a class="ghost" href="index.html">Back to launch</a>
+    </main>
+    <script src="js/mix.js"></script>
+  </body>
+</html>

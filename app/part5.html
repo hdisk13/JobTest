@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Same / Different · JobTest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Unbounded:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="phone sitting">
+      <p class="sticker">JobTest sitting plan, not official AP admin</p>
+      <div class="kicker-row">
+        <p class="kicker teal" data-sitting>One sitting</p>
+        <p class="kicker muted">Part 5 of 6</p>
+      </div>
+      <h1 class="display title-grid">Same / Different</h1>
+      <div class="clock-row">
+        <p class="clock" id="clock">5:12</p>
+        <div class="clock-meta">
+          <span class="badge">Live</span>
+          <p class="clock-note">after the break</p>
+        </div>
+      </div>
+      <div class="pips" aria-hidden="true">
+        <i class="pip lime"></i><i class="pip lime"></i><i class="pip lime"></i>
+        <i class="pip lime"></i><i class="pip lime"></i><i class="pip lime"></i>
+        <i class="pip lime"></i><i class="pip lime"></i><i class="pip lime"></i>
+        <i class="pip lime"></i><i class="pip teal"></i><i class="pip teal"></i>
+        <i class="pip teal"></i><i class="pip"></i><i class="pip"></i>
+        <i class="pip"></i><i class="pip"></i><i class="pip"></i>
+      </div>
+      <section class="sheet scroll">
+        <div class="sheet-head">
+          <h2>Name Comparison</h2>
+          <p>tap Same or Diff</p>
+        </div>
+        <div class="rows" id="rows"></div>
+      </section>
+      <div class="page-foot">
+        <p class="keep">one sitting · keep going</p>
+        <p class="more">↓ more below</p>
+      </div>
+    </main>
+    <script src="js/names.js"></script>
+    <script src="js/part5.js"></script>
+  </body>
+</html>
