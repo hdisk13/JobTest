@@ -124,7 +124,7 @@ button {
 .sample-tag {
   margin-top: 12px;
   background: var(--teal);
-  color: #ffffff;
+  color: var(--ink);
 }
 
 .claim-line {
