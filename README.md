@@ -37,7 +37,7 @@ All 20 files from the archive are in [`source/`](source/), downloaded from `http
 | [`AP_Data_Entry.exe`](source/AP_Data_Entry.exe) | Data entry program |
 | [`APDE_help.zip`](source/APDE_help.zip) | Data entry help files |
 
-See [`DESIGN.md`](DESIGN.md) for the current visual brief.
+See [`DESIGN.md`](DESIGN.md) for the current visual brief and [`EDUCATOR.md`](EDUCATOR.md) for the locked product shape (Option 3: Parts 1–6 only).
 
 ## License
 
