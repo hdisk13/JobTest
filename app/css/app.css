@@ -127,6 +127,12 @@ button {
   color: #ffffff;
 }
 
+.claim-line {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .clock-row {
   display: flex;
   align-items: flex-start;
