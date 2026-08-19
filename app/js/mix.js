@@ -5,7 +5,7 @@
   const zoneLabel = document.getElementById("zone-label");
 
   const labels = {
-    "12": "Job Zone 1–2: Very Little to Some Preparation Needed",
+    "12": "Job Zone 1–2 · Very little to some prep",
     "3": "Zone 3 · Medium prep",
     "4": "Zone 4 · Considerable prep",
     "5": "Zone 5 · Extensive prep",
