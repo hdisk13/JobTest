@@ -36,7 +36,7 @@ The 20 files from the archive are in [`source/`](source/), downloaded from `http
 | [`AP-SPUG-deskp.pdf`](source/AP-SPUG-deskp.pdf) | Scoring program user's guide |
 | [`AP_Data_Entry.exe`](source/AP_Data_Entry.exe) | Data entry program |
 | [`APDE_help.zip`](source/APDE_help.zip) | Data entry help files |
-| [`AP_Linking.pdf`](source/AP_Linking.pdf) | Linking Ability Profiler scores to O*NET occupations (Kroustalis, Lewis, Rivkin, Sept 2010) |
+| [`AP_Linking.pdf`](source/AP_Linking.pdf) | Kroustalis, Lewis, Rivkin (Sept 2010) occupation linking report, Table 2 p. 9 |
 
 See [`DESIGN.md`](DESIGN.md) for the current visual brief and [`EDUCATOR.md`](EDUCATOR.md) for the locked product shape (Option 3: Parts 1–6 only).
 
