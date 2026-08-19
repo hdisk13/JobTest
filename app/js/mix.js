@@ -1,21 +1,33 @@
 (function () {
   const jobs = document.getElementById("jobs");
-  const buttons = jobs.querySelectorAll("[data-view]");
-  const zone = document.getElementById("zone");
+  const horizonButtons = jobs.querySelectorAll("[data-horizon]");
+  const zoneButtons = jobs.querySelectorAll("[data-zone]");
+  const zoneLabel = document.getElementById("zone-label");
 
-  const copy = {
-    current: "Zone 2 · Some prep",
-    future: "Zone 4 · Considerable prep",
+  const labels = {
+    "12": "Job Zone 1–2: Very Little to Some Preparation Needed",
+    "3": "Zone 3 · Medium prep",
+    "4": "Zone 4 · Considerable prep",
+    "5": "Zone 5 · Extensive prep",
   };
 
-  buttons.forEach(function (button) {
+  horizonButtons.forEach(function (button) {
     button.addEventListener("click", function () {
-      const view = button.getAttribute("data-view");
-      jobs.setAttribute("data-view", view);
-      buttons.forEach(function (item) {
+      jobs.setAttribute("data-horizon", button.getAttribute("data-horizon"));
+      horizonButtons.forEach(function (item) {
         item.classList.toggle("is-on", item === button);
       });
-      zone.textContent = copy[view];
+    });
+  });
+
+  zoneButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const zone = button.getAttribute("data-zone");
+      jobs.setAttribute("data-zone", zone);
+      zoneButtons.forEach(function (item) {
+        item.classList.toggle("is-on", item === button);
+      });
+      zoneLabel.textContent = labels[zone];
     });
   });
 })();

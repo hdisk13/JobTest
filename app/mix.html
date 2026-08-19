@@ -79,21 +79,66 @@
         </article>
       </section>
 
-      <section class="section jobs" id="jobs" data-view="future">
+      <section class="section jobs" id="jobs" data-horizon="future" data-zone="4">
         <div class="section-head">
           <div>
             <h2>Jobs that use your mix</h2>
             <p class="section-copy">
-              <span id="zone">Zone 4 · Considerable prep</span><br />
+              <span id="zone-label">Zone 4 · Considerable prep</span><br />
               Same mix of strengths — not jobs you already qualify for.
             </p>
           </div>
           <div class="toggle" role="tablist">
-            <button type="button" data-view="current">Current</button>
-            <button type="button" class="is-on" data-view="future">Future</button>
+            <button type="button" data-horizon="current">Current</button>
+            <button type="button" class="is-on" data-horizon="future">Future</button>
           </div>
         </div>
-        <div class="job-list future">
+        <div class="zones" role="tablist" aria-label="Job Zones">
+          <button type="button" data-zone="12">1–2</button>
+          <button type="button" data-zone="3">3</button>
+          <button type="button" class="is-on" data-zone="4">4</button>
+          <button type="button" data-zone="5">5</button>
+        </div>
+        <p class="section-copy zone-note">
+          Demo cards for layout — not official AP matches or current O*NET OAPs.
+        </p>
+        <div class="job-list" data-zone-list="12">
+          <article class="job">
+            <strong>Photographers</strong>
+            <span class="badge">Very strong</span>
+          </article>
+          <article class="job">
+            <strong>Floral Designers</strong>
+            <span class="badge teal">Strong</span>
+          </article>
+          <article class="job">
+            <strong>Cabinetmakers</strong>
+            <span class="badge teal">Strong</span>
+          </article>
+          <article class="job">
+            <strong>Merchandise Displayers</strong>
+            <span class="badge paper">Good</span>
+          </article>
+        </div>
+        <div class="job-list" data-zone-list="3">
+          <article class="job">
+            <strong>Drafters</strong>
+            <span class="badge">Very strong</span>
+          </article>
+          <article class="job">
+            <strong>Surveying Technicians</strong>
+            <span class="badge teal">Strong</span>
+          </article>
+          <article class="job">
+            <strong>Civil Engineering Techs</strong>
+            <span class="badge teal">Strong</span>
+          </article>
+          <article class="job">
+            <strong>Desktop Publishers</strong>
+            <span class="badge paper">Good</span>
+          </article>
+        </div>
+        <div class="job-list" data-zone-list="4">
           <article class="job">
             <strong>Architects</strong>
             <span class="badge">Very strong</span>
@@ -111,21 +156,21 @@
             <span class="badge paper">Good</span>
           </article>
         </div>
-        <div class="job-list current">
+        <div class="job-list" data-zone-list="5">
           <article class="job">
-            <strong>Drafters</strong>
+            <strong>Landscape Architects</strong>
             <span class="badge">Very strong</span>
           </article>
           <article class="job">
-            <strong>Surveying Technicians</strong>
+            <strong>Urban Planners</strong>
+            <span class="badge">Very strong</span>
+          </article>
+          <article class="job">
+            <strong>Marine Architects</strong>
             <span class="badge teal">Strong</span>
           </article>
           <article class="job">
-            <strong>Civil Engineering Techs</strong>
-            <span class="badge teal">Strong</span>
-          </article>
-          <article class="job">
-            <strong>Photographers</strong>
+            <strong>Cartographers</strong>
             <span class="badge paper">Good</span>
           </article>
         </div>
