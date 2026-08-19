@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vocabulary · JobTest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="phone power" data-beat="practice">
+      <div class="kicker-row">
+        <p class="kicker teal">One sitting</p>
+        <p class="kicker muted">Part 2 of 6</p>
+      </div>
+      <h1 class="display title-power">Two words</h1>
+      <p class="lede light power-lede">
+        Vocabulary. Invented demo — not an official AP item.
+      </p>
+
+      <section class="sheet item-sheet" id="practice">
+        <div class="sheet-head">
+          <h2>Practice</h2>
+          <p>must finish first</p>
+        </div>
+        <p class="practice-note">
+          Official practice cannot be skipped. This is an invented demo, not an
+          official AP practice item. Pick the two words that go together.
+        </p>
+        <p class="stem">Which two belong together?</p>
+        <div class="word-grid" id="practice-choices" data-pick="2">
+          <button type="button" class="word-pick">warm</button>
+          <button type="button" class="word-pick">cold</button>
+          <button type="button" class="word-pick">table</button>
+          <button type="button" class="word-pick">pencil</button>
+        </div>
+        <button type="button" class="cta practice-next" id="practice-next" disabled>
+          Start Item 01
+        </button>
+      </section>
+
+      <section class="sheet item-sheet is-hidden" id="live" hidden>
+        <div class="sheet-head">
+          <h2>Item 01</h2>
+          <p>pick two</p>
+        </div>
+        <p class="stem">Which two belong together?</p>
+        <div class="word-grid" id="live-choices" data-pick="2">
+          <button type="button" class="word-pick">silent</button>
+          <button type="button" class="word-pick">quiet</button>
+          <button type="button" class="word-pick">hammer</button>
+          <button type="button" class="word-pick">window</button>
+        </div>
+      </section>
+
+      <p class="page-foot">
+        <span class="keep">one sitting · power part</span>
+      </p>
+      <a class="ghost" href="index.html">Back to launch</a>
+    </main>
+    <script src="js/part2.js"></script>
+  </body>
+</html>

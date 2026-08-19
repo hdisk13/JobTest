@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Three-Dimensional Space · JobTest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="phone power" data-beat="practice">
+      <div class="kicker-row">
+        <p class="kicker teal">One sitting</p>
+        <p class="kicker muted">Part 3 of 6</p>
+      </div>
+      <h1 class="display title-power">In space</h1>
+      <p class="lede light power-lede">
+        Three-Dimensional Space. Invented demo — not an official AP item.
+      </p>
+
+      <section class="sheet item-sheet" id="practice">
+        <div class="sheet-head">
+          <h2>Practice</h2>
+          <p>must finish first</p>
+        </div>
+        <p class="practice-note">
+          Official practice cannot be skipped. This is an invented demo, not an
+          official AP practice item. Tap the matching shape.
+        </p>
+        <p class="stem">Which one is the same L, just turned?</p>
+        <div class="space-prompt" aria-hidden="true">
+          <svg viewBox="0 0 80 80" class="space-svg">
+            <rect x="10" y="18" width="20" height="44" fill="#0b1220" />
+            <rect x="10" y="42" width="44" height="20" fill="#0b1220" />
+          </svg>
+        </div>
+        <div class="space-grid" id="practice-choices">
+          <button type="button" class="choice fig">
+            <span>A</span>
+            <svg viewBox="0 0 80 80" class="space-svg">
+              <rect x="26" y="18" width="44" height="20" fill="#0b1220" />
+              <rect x="50" y="18" width="20" height="44" fill="#0b1220" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig">
+            <span>B</span>
+            <svg viewBox="0 0 80 80" class="space-svg">
+              <circle cx="40" cy="40" r="22" fill="#0b1220" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig">
+            <span>C</span>
+            <svg viewBox="0 0 80 80" class="space-svg">
+              <rect x="18" y="18" width="44" height="44" fill="#0b1220" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig">
+            <span>D</span>
+            <svg viewBox="0 0 80 80" class="space-svg">
+              <polygon points="16,64 40,16 64,64" fill="#0b1220" />
+            </svg>
+          </button>
+        </div>
+        <button type="button" class="cta practice-next" id="practice-next" disabled>
+          Start Item 01
+        </button>
+      </section>
+
+      <section class="sheet item-sheet is-hidden" id="live" hidden>
+        <div class="sheet-head">
+          <h2>Item 01</h2>
+          <p>tap one figure</p>
+        </div>
+        <p class="stem">Which cube is the same one, just turned?</p>
+        <div class="space-prompt" aria-hidden="true">
+          <svg viewBox="0 0 90 86" class="space-svg">
+            <polygon points="18,30 45,16 72,30 45,44" fill="#12d4c4" />
+            <polygon points="18,30 45,44 45,74 18,60" fill="#0b1220" />
+            <polygon points="45,44 72,30 72,60 45,74" fill="#2a354c" />
+            <circle cx="36" cy="36" r="4" fill="#f4f0e6" />
+          </svg>
+        </div>
+        <div class="space-grid" id="choices">
+          <button type="button" class="choice fig">
+            <span>A</span>
+            <svg viewBox="0 0 90 86" class="space-svg">
+              <polygon points="18,30 45,16 72,30 45,44" fill="#8b93a7" />
+              <polygon points="18,30 45,44 45,74 18,60" fill="#0b1220" />
+              <polygon points="45,44 72,30 72,60 45,74" fill="#2a354c" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig">
+            <span>B</span>
+            <svg viewBox="0 0 90 86" class="space-svg">
+              <polygon points="18,30 45,16 72,30 45,44" fill="#12d4c4" />
+              <polygon points="18,30 45,44 45,74 18,60" fill="#2a354c" />
+              <polygon points="45,44 72,30 72,60 45,74" fill="#0b1220" />
+              <circle cx="54" cy="36" r="4" fill="#f4f0e6" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig">
+            <span>C</span>
+            <svg viewBox="0 0 90 86" class="space-svg">
+              <polygon points="18,30 45,16 72,30 45,44" fill="#c8f542" />
+              <polygon points="18,30 45,44 45,74 18,60" fill="#0b1220" />
+              <polygon points="45,44 72,30 72,60 45,74" fill="#2a354c" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig">
+            <span>D</span>
+            <svg viewBox="0 0 90 86" class="space-svg">
+              <rect x="22" y="22" width="46" height="46" fill="#0b1220" />
+              <circle cx="45" cy="45" r="6" fill="#f4f0e6" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <p class="page-foot">
+        <span class="keep">one sitting · power part</span>
+      </p>
+      <a class="ghost" href="index.html">Back to launch</a>
+    </main>
+    <script src="js/part3.js"></script>
+  </body>
+</html>
