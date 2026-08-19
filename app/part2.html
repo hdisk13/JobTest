@@ -22,33 +22,22 @@
       <p class="lede light power-lede">
         Vocabulary. Invented demo — not an official AP item.
       </p>
-      <p class="demo-banner">Demo items, not the O*NET Ability Profiler.</p>
+      <p class="badge teal demo-chip">Demo items, not the O*NET Ability Profiler.</p>
 
       <section class="sheet item-sheet" id="walk">
         <div class="sheet-head">
           <h2>Practice · walked</h2>
-          <p>pair idea</p>
+          <p>one pair</p>
         </div>
-        <p class="practice-note">
-          Which TWO of FOUR words have the SAME or OPPOSITE meaning. The answer
-          is one pair, like A–B — not two separate picks.
-        </p>
-        <p class="stem">Walked example. Warm and cold are opposites.</p>
-        <div class="word-grid" aria-hidden="true">
-          <button type="button" class="word-pick is-on" disabled data-letter="A">
-            <small>A</small>warm
-          </button>
-          <button type="button" class="word-pick is-on" disabled data-letter="B">
-            <small>B</small>cold
-          </button>
-          <button type="button" class="word-pick" disabled data-letter="C">
-            <small>C</small>table
-          </button>
-          <button type="button" class="word-pick" disabled data-letter="D">
-            <small>D</small>pencil
-          </button>
+        <p class="stem">Warm and cold are opposites. That answer is one pair: A–B.</p>
+        <button type="button" class="pair-object" disabled>
+          <span>A–B</span>
+          <strong>warm · cold</strong>
+        </button>
+        <div class="word-grid leftovers">
+          <button type="button" class="word-pick" disabled><small>C</small>table</button>
+          <button type="button" class="word-pick" disabled><small>D</small>pencil</button>
         </div>
-        <p class="pair-readout">Pair A–B</p>
         <button type="button" class="cta" id="walk-next">Try one pair</button>
       </section>
 
@@ -57,25 +46,16 @@
           <h2>Practice · your try</h2>
           <p>must finish first</p>
         </div>
-        <p class="practice-note">
-          Tap two words to make one pair. Same meaning or opposite meaning.
-        </p>
         <p class="stem">Which TWO have the SAME or OPPOSITE meaning?</p>
-        <div class="word-grid" id="try-choices">
-          <button type="button" class="word-pick" data-letter="A">
-            <small>A</small>loud
-          </button>
-          <button type="button" class="word-pick" data-letter="B">
-            <small>B</small>river
-          </button>
-          <button type="button" class="word-pick" data-letter="C">
-            <small>C</small>quiet
-          </button>
-          <button type="button" class="word-pick" data-letter="D">
-            <small>D</small>chair
-          </button>
+        <div class="pair-board">
+          <button type="button" class="pair-object is-hidden" id="try-object"></button>
+          <div class="word-grid" id="try-choices">
+            <button type="button" class="word-pick" data-letter="A" data-word="loud"><small>A</small>loud</button>
+            <button type="button" class="word-pick" data-letter="B" data-word="river"><small>B</small>river</button>
+            <button type="button" class="word-pick" data-letter="C" data-word="quiet"><small>C</small>quiet</button>
+            <button type="button" class="word-pick" data-letter="D" data-word="chair"><small>D</small>chair</button>
+          </div>
         </div>
-        <p class="pair-readout" id="try-pair">Pair —</p>
         <button type="button" class="cta practice-next" id="try-next" disabled>
           Start Item 01
         </button>
@@ -87,25 +67,19 @@
           <p>one pair</p>
         </div>
         <p class="stem">Which TWO have the SAME or OPPOSITE meaning?</p>
-        <div class="word-grid" id="live-choices">
-          <button type="button" class="word-pick" data-letter="A">
-            <small>A</small>silent
-          </button>
-          <button type="button" class="word-pick" data-letter="B">
-            <small>B</small>hammer
-          </button>
-          <button type="button" class="word-pick" data-letter="C">
-            <small>C</small>quiet
-          </button>
-          <button type="button" class="word-pick" data-letter="D">
-            <small>D</small>window
-          </button>
+        <div class="pair-board">
+          <button type="button" class="pair-object is-hidden" id="live-object"></button>
+          <div class="word-grid" id="live-choices">
+            <button type="button" class="word-pick" data-letter="A" data-word="silent"><small>A</small>silent</button>
+            <button type="button" class="word-pick" data-letter="B" data-word="hammer"><small>B</small>hammer</button>
+            <button type="button" class="word-pick" data-letter="C" data-word="quiet"><small>C</small>quiet</button>
+            <button type="button" class="word-pick" data-letter="D" data-word="window"><small>D</small>window</button>
+          </div>
         </div>
-        <p class="pair-readout" id="live-pair">Pair —</p>
       </section>
 
       <p class="page-foot">
-        <span class="keep">one sitting · power part · no clock</span>
+        <span class="keep">one sitting · power part</span>
       </p>
       <a class="ghost" href="index.html">Back to launch</a>
     </main>
