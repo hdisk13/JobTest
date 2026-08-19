@@ -886,6 +886,11 @@ button {
   font-weight: 800;
 }
 
+.cta:disabled {
+  opacity: 0.38;
+  box-shadow: none;
+}
+
 .break-copy {
   margin: 0 4px 12px;
   font-size: 14px;
