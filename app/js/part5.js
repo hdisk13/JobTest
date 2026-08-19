@@ -1,18 +1,4 @@
 (function () {
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("split") === "1") {
-    document.body.classList.add("is-split");
-    const sitting = document.querySelector("[data-sitting]");
-    if (sitting) sitting.textContent = "Phone split";
-    const phone = document.querySelector(".phone");
-    if (phone && !phone.querySelector(".sticker")) {
-      const sticker = document.createElement("p");
-      sticker.className = "sticker";
-      sticker.textContent = "JobTest sitting plan, not official AP admin";
-      phone.insertBefore(sticker, phone.firstChild);
-    }
-  }
-
   const page = document.querySelector(".phone");
   const walk = document.getElementById("walk");
   const tryCard = document.getElementById("try");
@@ -25,6 +11,7 @@
   const partNext = document.getElementById("part-next");
   const names = window.JOBTEST_NAMES || [];
   const clock = document.getElementById("clock");
+  const clockRow = document.getElementById("clock-row");
   let remaining = 6 * 60;
   let ticking = false;
 
@@ -57,6 +44,7 @@
       footMore.textContent = "↓ more below";
       partNext.hidden = false;
       partNext.classList.remove("is-hidden");
+      clockRow.hidden = false;
       startClock();
     }
   }

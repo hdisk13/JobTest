@@ -9,6 +9,7 @@
   const rows = document.getElementById("rows");
   const footMore = document.getElementById("foot-more");
   const clock = document.getElementById("clock");
+  const clockRow = document.getElementById("clock-row");
   const partNext = document.getElementById("part-next");
   const items = window.JOBTEST_COMPUTATION || [];
   const letters = ["A", "B", "C", "D"];
@@ -50,6 +51,7 @@
       footMore.textContent = "↓ more below";
       partNext.hidden = false;
       partNext.classList.remove("is-hidden");
+      clockRow.hidden = false;
       startClock();
     }
   }
