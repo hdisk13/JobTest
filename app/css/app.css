@@ -434,6 +434,11 @@ button {
   color: var(--ink);
 }
 
+.paper-job > div {
+  min-width: 0;
+  flex: 1;
+}
+
 .paper-job p {
   margin: 4px 0 0;
   color: #5d6474;
@@ -447,8 +452,8 @@ button {
   margin-top: 2px;
 }
 
-.start-with {
-  margin-top: 10px;
+.paper-job .start-with {
+  margin-top: 12px;
   color: #8a8490;
   font-size: 10px;
   font-weight: 800;
@@ -457,20 +462,37 @@ button {
 }
 
 .cert-chip {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
   margin-top: 6px;
-  padding: 7px 10px;
+  padding: 9px 11px 8px;
   border: 1.5px dashed var(--ink);
-  border-radius: 8px;
+  border-radius: 10px;
   background: #ffffff;
   color: var(--ink);
-  font-size: 12px;
-  font-weight: 600;
+}
+
+.cert-kind {
+  color: #0ea89c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .cert-chip strong {
-  display: inline;
-  font-size: 12px;
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.cert-note {
+  color: #8a8490;
+  font-size: 11px;
+  font-weight: 500;
 }
 
 
@@ -617,7 +639,7 @@ button {
 }
 
 .horizon button[data-horizon="current"] {
-  border-color: var(--teal);
+  color: var(--muted);
 }
 
 .horizon button.is-on {
@@ -657,27 +679,34 @@ button {
   color: var(--ink);
 }
 
+.abilities {
+  margin-top: 18px;
+}
+
 .ability {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 4px 12px;
-  padding: 12px 4px;
-  border-top: 1px dashed var(--line);
+  padding: 14px 2px;
+  border-top: 1px dashed rgba(244, 240, 230, 0.18);
 }
 
 .ability:first-of-type {
   border-top: 0;
+  padding-top: 4px;
 }
 
 .ability h3 {
   margin: 0;
-  font-size: 14px;
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 800;
 }
 
 .ability p {
   margin: 3px 0 0;
-  color: #5d6474;
-  font-size: 11.5px;
+  color: var(--muted);
+  font-size: 12px;
   line-height: 1.3;
 }
 
@@ -688,7 +717,7 @@ button {
 .score-col span {
   display: block;
   margin-top: 2px;
-  color: #8a8490;
+  color: var(--muted);
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -701,22 +730,23 @@ button {
   font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 0.9;
+  color: var(--white);
 }
 
 .score.lime {
-  color: #8aaa14;
+  color: var(--lime);
 }
 
 .score.teal {
-  color: #0ea89c;
+  color: var(--teal);
 }
 
 .bar {
   grid-column: 1 / -1;
-  height: 7px;
-  margin-top: 6px;
+  height: 6px;
+  margin-top: 8px;
   border-radius: 999px;
-  background: rgba(11, 18, 32, 0.08);
+  background: #1a2438;
   overflow: hidden;
 }
 
@@ -724,15 +754,15 @@ button {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: var(--teal);
-}
-
-.bar.ink > span {
-  background: var(--ink);
+  background: #d7dce8;
 }
 
 .bar.lime > span {
   background: var(--lime);
+}
+
+.bar.teal > span {
+  background: var(--teal);
 }
 
 .name-row {
@@ -834,9 +864,6 @@ button {
   line-height: 1.45;
 }
 
-.sheet.abilities {
-  margin-top: 18px;
-}
 
 .job-list {
   margin-top: 14px;
