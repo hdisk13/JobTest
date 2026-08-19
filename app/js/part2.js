@@ -1,40 +1,64 @@
 (function () {
   const page = document.querySelector(".phone.power");
-  const practice = document.getElementById("practice");
+  const walk = document.getElementById("walk");
+  const tryCard = document.getElementById("try");
   const live = document.getElementById("live");
-  const practiceChoices = document.getElementById("practice-choices");
+  const walkNext = document.getElementById("walk-next");
+  const tryNext = document.getElementById("try-next");
+  const tryChoices = document.getElementById("try-choices");
   const liveChoices = document.getElementById("live-choices");
-  const next = document.getElementById("practice-next");
+  const tryPair = document.getElementById("try-pair");
+  const livePair = document.getElementById("live-pair");
 
-  function selectedCount(group) {
-    return group.querySelectorAll(".word-pick.is-on").length;
+  function selected(group) {
+    return Array.prototype.slice.call(group.querySelectorAll(".word-pick.is-on"));
   }
 
-  function bindPickTwo(group, onChange) {
+  function pairLabel(buttons) {
+    if (buttons.length !== 2) return "Pair —";
+    const letters = buttons
+      .map(function (button) {
+        return button.getAttribute("data-letter");
+      })
+      .sort();
+    return "Pair " + letters[0] + "–" + letters[1];
+  }
+
+  function bindPair(group, readout, onReady) {
     group.addEventListener("click", function (event) {
       const button = event.target.closest(".word-pick");
-      if (!button) return;
+      if (!button || button.disabled) return;
       if (button.classList.contains("is-on")) {
         button.classList.remove("is-on");
-      } else if (selectedCount(group) < 2) {
+      } else if (selected(group).length < 2) {
         button.classList.add("is-on");
       }
-      if (onChange) onChange();
+      const picks = selected(group);
+      readout.textContent = pairLabel(picks);
+      if (onReady) onReady(picks.length === 2);
     });
   }
 
-  bindPickTwo(practiceChoices, function () {
-    next.disabled = selectedCount(practiceChoices) !== 2;
+  function show(card, beat) {
+    [walk, tryCard, live].forEach(function (section) {
+      const on = section === card;
+      section.hidden = !on;
+      section.classList.toggle("is-hidden", !on);
+    });
+    page.setAttribute("data-beat", beat);
+  }
+
+  bindPair(tryChoices, tryPair, function (ready) {
+    tryNext.disabled = !ready;
+  });
+  bindPair(liveChoices, livePair);
+
+  walkNext.addEventListener("click", function () {
+    show(tryCard, "try");
   });
 
-  bindPickTwo(liveChoices);
-
-  next.addEventListener("click", function () {
-    if (next.disabled) return;
-    practice.hidden = true;
-    practice.classList.add("is-hidden");
-    live.hidden = false;
-    live.classList.remove("is-hidden");
-    page.setAttribute("data-beat", "live");
+  tryNext.addEventListener("click", function () {
+    if (tryNext.disabled) return;
+    show(live, "live");
   });
 })();

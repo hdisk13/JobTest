@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-    <main class="phone power" data-beat="practice">
+    <main class="phone power" data-beat="walk">
       <div class="kicker-row">
         <p class="kicker teal">One sitting</p>
         <p class="kicker muted">Part 3 of 6</p>
@@ -22,51 +22,106 @@
       <p class="lede light power-lede">
         Three-Dimensional Space. Invented demo — not an official AP item.
       </p>
+      <p class="demo-banner">Demo items, not the O*NET Ability Profiler.</p>
 
-      <section class="sheet item-sheet" id="practice">
+      <section class="sheet item-sheet" id="walk">
         <div class="sheet-head">
-          <h2>Practice</h2>
+          <h2>Practice · walked</h2>
+          <p>fold idea</p>
+        </div>
+        <p class="practice-note">
+          Which ONE of FOUR 3-D figures can be made by bending or rolling the
+          2-D form. Practice may show a fold. Live items will not.
+        </p>
+        <p class="stem">Bend on the dashed line. This form makes figure A.</p>
+        <div class="space-prompt" aria-hidden="true">
+          <svg viewBox="0 0 120 72" class="space-svg">
+            <rect x="14" y="18" width="44" height="36" fill="#0b1220" />
+            <rect x="58" y="18" width="44" height="36" fill="#2a354c" />
+            <line x1="58" y1="16" x2="58" y2="56" stroke="#12d4c4" stroke-width="2" stroke-dasharray="4 3" />
+            <polygon points="72,10 86,18 72,26" fill="#12d4c4" />
+          </svg>
+        </div>
+        <div class="choices" aria-hidden="true">
+          <button type="button" class="choice fig-row is-on" disabled>
+            <span>A · folded</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="20,18 48,10 48,52 20,60" fill="#0b1220" />
+              <polygon points="48,10 76,18 76,60 48,52" fill="#2a354c" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig-row" disabled>
+            <span>B · flat</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <rect x="16" y="22" width="58" height="26" fill="#0b1220" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig-row" disabled>
+            <span>C · tube</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <ellipse cx="45" cy="22" rx="22" ry="8" fill="#8b93a7" />
+              <rect x="23" y="22" width="44" height="28" fill="#2a354c" />
+              <ellipse cx="45" cy="50" rx="22" ry="8" fill="#0b1220" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig-row" disabled>
+            <span>D · peak</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="18,56 45,14 72,56" fill="#0b1220" />
+            </svg>
+          </button>
+        </div>
+        <button type="button" class="cta" id="walk-next">Try one fold</button>
+      </section>
+
+      <section class="sheet item-sheet is-hidden" id="try" hidden>
+        <div class="sheet-head">
+          <h2>Practice · your try</h2>
           <p>must finish first</p>
         </div>
         <p class="practice-note">
-          Official practice cannot be skipped. This is an invented demo, not an
-          official AP practice item. Tap the matching shape.
+          Fold hint is on this practice form only. Tap the one 3-D figure the
+          form can make.
         </p>
-        <p class="stem">Which one is the same L, just turned?</p>
+        <p class="stem">Which ONE figure can this form make?</p>
         <div class="space-prompt" aria-hidden="true">
-          <svg viewBox="0 0 80 80" class="space-svg">
-            <rect x="10" y="18" width="20" height="44" fill="#0b1220" />
-            <rect x="10" y="42" width="44" height="20" fill="#0b1220" />
+          <svg viewBox="0 0 140 70" class="space-svg">
+            <rect x="12" y="22" width="36" height="26" fill="#0b1220" />
+            <rect x="48" y="22" width="36" height="26" fill="#2a354c" />
+            <rect x="84" y="22" width="36" height="26" fill="#0b1220" />
+            <line x1="48" y1="20" x2="48" y2="50" stroke="#12d4c4" stroke-width="2" stroke-dasharray="4 3" />
+            <line x1="84" y1="20" x2="84" y2="50" stroke="#12d4c4" stroke-width="2" stroke-dasharray="4 3" />
           </svg>
         </div>
-        <div class="choices" id="practice-choices">
+        <div class="choices" id="try-choices">
           <button type="button" class="choice fig-row">
             <span>A</span>
-            <svg viewBox="0 0 80 80" class="space-svg">
-              <rect x="26" y="18" width="44" height="20" fill="#0b1220" />
-              <rect x="50" y="18" width="20" height="44" fill="#0b1220" />
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <circle cx="45" cy="35" r="20" fill="#0b1220" />
             </svg>
           </button>
           <button type="button" class="choice fig-row">
             <span>B</span>
-            <svg viewBox="0 0 80 80" class="space-svg">
-              <circle cx="40" cy="40" r="22" fill="#0b1220" />
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="18,20 36,12 36,50 18,58" fill="#0b1220" />
+              <polygon points="36,12 54,20 54,58 36,50" fill="#12d4c4" />
+              <polygon points="54,20 72,12 72,50 54,58" fill="#2a354c" />
             </svg>
           </button>
           <button type="button" class="choice fig-row">
             <span>C</span>
-            <svg viewBox="0 0 80 80" class="space-svg">
-              <rect x="18" y="18" width="44" height="44" fill="#0b1220" />
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="20,56 45,16 70,56" fill="#0b1220" />
             </svg>
           </button>
           <button type="button" class="choice fig-row">
             <span>D</span>
-            <svg viewBox="0 0 80 80" class="space-svg">
-              <polygon points="16,64 40,16 64,64" fill="#0b1220" />
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <rect x="28" y="16" width="34" height="38" fill="#0b1220" />
             </svg>
           </button>
         </div>
-        <button type="button" class="cta practice-next" id="practice-next" disabled>
+        <button type="button" class="cta practice-next" id="try-next" disabled>
           Start Item 01
         </button>
       </section>
@@ -74,55 +129,51 @@
       <section class="sheet item-sheet is-hidden" id="live" hidden>
         <div class="sheet-head">
           <h2>Item 01</h2>
-          <p>tap one figure</p>
+          <p>no fold hint</p>
         </div>
-        <p class="stem">Which cube is the same one, just turned?</p>
+        <p class="stem">Which ONE of FOUR figures can this 2-D form make?</p>
         <div class="space-prompt" aria-hidden="true">
-          <svg viewBox="0 0 90 86" class="space-svg">
-            <polygon points="18,30 45,16 72,30 45,44" fill="#12d4c4" />
-            <polygon points="18,30 45,44 45,74 18,60" fill="#0b1220" />
-            <polygon points="45,44 72,30 72,60 45,74" fill="#2a354c" />
-            <circle cx="36" cy="36" r="4" fill="#f4f0e6" />
+          <svg viewBox="0 0 120 90" class="space-svg">
+            <rect x="42" y="10" width="28" height="24" fill="#0b1220" />
+            <rect x="14" y="34" width="28" height="24" fill="#2a354c" />
+            <rect x="42" y="34" width="28" height="24" fill="#0b1220" />
+            <rect x="70" y="34" width="28" height="24" fill="#2a354c" />
           </svg>
         </div>
         <div class="choices" id="choices">
           <button type="button" class="choice fig-row">
             <span>A</span>
-            <svg viewBox="0 0 90 86" class="space-svg">
-              <polygon points="18,30 45,16 72,30 45,44" fill="#8b93a7" />
-              <polygon points="18,30 45,44 45,74 18,60" fill="#0b1220" />
-              <polygon points="45,44 72,30 72,60 45,74" fill="#2a354c" />
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <ellipse cx="45" cy="22" rx="20" ry="7" fill="#8b93a7" />
+              <rect x="25" y="22" width="40" height="26" fill="#2a354c" />
+              <ellipse cx="45" cy="48" rx="20" ry="7" fill="#0b1220" />
             </svg>
           </button>
           <button type="button" class="choice fig-row">
             <span>B</span>
-            <svg viewBox="0 0 90 86" class="space-svg">
-              <polygon points="18,30 45,16 72,30 45,44" fill="#12d4c4" />
-              <polygon points="18,30 45,44 45,74 18,60" fill="#2a354c" />
-              <polygon points="45,44 72,30 72,60 45,74" fill="#0b1220" />
-              <circle cx="54" cy="36" r="4" fill="#f4f0e6" />
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="22,28 45,14 68,28 45,42" fill="#12d4c4" />
+              <polygon points="22,28 45,42 45,62 22,48" fill="#0b1220" />
+              <polygon points="45,42 68,28 68,48 45,62" fill="#2a354c" />
             </svg>
           </button>
           <button type="button" class="choice fig-row">
             <span>C</span>
-            <svg viewBox="0 0 90 86" class="space-svg">
-              <polygon points="18,30 45,16 72,30 45,44" fill="#c8f542" />
-              <polygon points="18,30 45,44 45,74 18,60" fill="#0b1220" />
-              <polygon points="45,44 72,30 72,60 45,74" fill="#2a354c" />
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <circle cx="45" cy="35" r="18" fill="#0b1220" />
             </svg>
           </button>
           <button type="button" class="choice fig-row">
             <span>D</span>
-            <svg viewBox="0 0 90 86" class="space-svg">
-              <rect x="22" y="22" width="46" height="46" fill="#0b1220" />
-              <circle cx="45" cy="45" r="6" fill="#f4f0e6" />
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="18,54 45,14 72,54" fill="#0b1220" />
             </svg>
           </button>
         </div>
       </section>
 
       <p class="page-foot">
-        <span class="keep">one sitting · power part</span>
+        <span class="keep">one sitting · power part · no clock</span>
       </p>
       <a class="ghost" href="index.html">Back to launch</a>
     </main>
