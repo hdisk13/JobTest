@@ -21,25 +21,31 @@
       <h1 class="display title-grid">Plain numbers</h1>
       <p class="badge teal demo-chip">Demo items, not the O*NET Ability Profiler.</p>
       <div class="clock-row">
-        <p class="clock" id="clock">4:40</p>
-        <p class="clock-note">demo clock · speeded</p>
+        <p class="clock" id="clock">6:00</p>
+        <p class="clock-note">work down the page</p>
       </div>
-      <p class="clock-note">−1 per wrong. Skip if no idea. Meaning does not matter.</p>
+      <p class="speed-rule">
+        SPEED is very important. You will not finish every item. Guess if you
+        have a slight idea or can drop choices. If no idea, skip. One point per
+        correct. Lose one quarter (1/4) of a point per wrong. Blanks are not
+        penalized.
+      </p>
 
       <section class="sheet item-sheet" id="walk">
         <div class="sheet-head">
           <h2>Practice · walked</h2>
-          <p>one answer</p>
+          <p>Q1 subtract</p>
         </div>
-        <p class="stem">15 ÷ 3 =</p>
+        <p class="op-tag">Subtract</p>
+        <p class="stem">22 − 9 =</p>
         <div class="comp-cells" aria-hidden="true">
-          <button type="button" class="comp-cell is-on" disabled>5</button>
-          <button type="button" class="comp-cell" disabled>6</button>
-          <button type="button" class="comp-cell" disabled>12</button>
-          <button type="button" class="comp-cell" disabled>18</button>
-          <button type="button" class="comp-cell none" disabled>none of these</button>
+          <button type="button" class="comp-cell" disabled><small>A</small>11</button>
+          <button type="button" class="comp-cell is-on" disabled><small>B</small>13</button>
+          <button type="button" class="comp-cell" disabled><small>C</small>15</button>
+          <button type="button" class="comp-cell" disabled><small>D</small>31</button>
+          <button type="button" class="comp-cell none" disabled><small>E</small>none of these</button>
         </div>
-        <p class="pair-line">15 divided by 3 is 5</p>
+        <p class="pair-line">22 minus 9 is 13 · B</p>
         <button type="button" class="cta" id="walk-next">Try one item</button>
       </section>
 
@@ -48,13 +54,14 @@
           <h2>Practice · your try</h2>
           <p>must finish first</p>
         </div>
-        <p class="stem">8 × 4 =</p>
+        <p class="op-tag">Divide</p>
+        <p class="stem">56 ÷ 7 =</p>
         <div class="comp-cells" id="try-choices">
-          <button type="button" class="comp-cell">12</button>
-          <button type="button" class="comp-cell">24</button>
-          <button type="button" class="comp-cell">32</button>
-          <button type="button" class="comp-cell">36</button>
-          <button type="button" class="comp-cell none">none of these</button>
+          <button type="button" class="comp-cell"><small>A</small>6</button>
+          <button type="button" class="comp-cell"><small>B</small>7</button>
+          <button type="button" class="comp-cell"><small>C</small>8</button>
+          <button type="button" class="comp-cell"><small>D</small>9</button>
+          <button type="button" class="comp-cell none"><small>E</small>none of these</button>
         </div>
         <button type="button" class="cta practice-next" id="try-next" disabled>
           Start the sheet
@@ -64,13 +71,14 @@
       <section class="sheet scroll" id="grid" hidden>
         <div class="sheet-head">
           <h2>Computation</h2>
-          <p>tap one · last is none</p>
+          <p>40 items · A–E</p>
         </div>
+        <div class="scratch" aria-hidden="true"><span>scratch</span></div>
         <div class="rows" id="rows"></div>
       </section>
 
       <div class="page-foot">
-        <p class="keep">one sitting · keep going</p>
+        <p class="keep">one sitting · work down</p>
         <p class="more" id="foot-more">practice first</p>
       </div>
     </main>

@@ -21,61 +21,65 @@
       <h1 class="display title-grid">Same object</h1>
       <p class="badge teal demo-chip">Demo items, not the O*NET Ability Profiler.</p>
       <div class="clock-row">
-        <p class="clock" id="clock">3:50</p>
-        <p class="clock-note">demo clock · speeded</p>
+        <p class="clock" id="clock">5:00</p>
+        <p class="clock-note">exact duplicate</p>
       </div>
-      <p class="clock-note">−1 per wrong. Skip if no idea. Meaning does not matter.</p>
+      <p class="speed-rule">
+        SPEED is very important. You will not finish every item. Slight idea →
+        guess. No idea → skip. One point per correct. Lose one third (1/3) of a
+        point per wrong. Blanks are not penalized.
+      </p>
 
       <section class="sheet item-sheet" id="walk">
         <div class="sheet-head">
           <h2>Practice · walked</h2>
-          <p>same form</p>
+          <p>P1 duplicate</p>
         </div>
-        <p class="stem">Which ONE is the same object?</p>
+        <p class="stem">Which ONE of FOUR is the exact duplicate?</p>
         <div class="match-practice">
           <div class="match-stem" aria-hidden="true">
             <svg viewBox="0 0 80 64" class="match-svg">
-              <polygon points="22,16 52,16 64,26 34,26" fill="#12d4c4" />
-              <polygon points="22,16 34,26 34,52 22,42" fill="#0b1220" />
-              <polygon points="34,26 64,26 64,52 34,52" fill="#2a354c" />
+              <rect x="18" y="14" width="44" height="36" fill="#0b1220" />
+              <rect x="22" y="18" width="36" height="28" fill="#f4f0e6" />
+              <circle cx="32" cy="32" r="5" fill="#12d4c4" />
             </svg>
           </div>
           <div class="match-cells" aria-hidden="true">
             <button type="button" class="match-cell is-on" disabled>
               <small>A</small>
               <svg viewBox="0 0 80 64" class="match-svg">
-                <polygon points="18,18 46,12 62,22 34,28" fill="#12d4c4" />
-                <polygon points="18,18 34,28 34,54 18,44" fill="#0b1220" />
-                <polygon points="34,28 62,22 62,48 34,54" fill="#2a354c" />
+                <rect x="18" y="14" width="44" height="36" fill="#0b1220" />
+                <rect x="22" y="18" width="36" height="28" fill="#f4f0e6" />
+                <circle cx="32" cy="32" r="5" fill="#12d4c4" />
               </svg>
             </button>
             <button type="button" class="match-cell" disabled>
               <small>B</small>
               <svg viewBox="0 0 80 64" class="match-svg">
-                <ellipse cx="40" cy="18" rx="18" ry="7" fill="#8b93a7" />
-                <rect x="22" y="18" width="36" height="30" fill="#2a354c" />
-                <ellipse cx="40" cy="48" rx="18" ry="7" fill="#0b1220" />
+                <rect x="18" y="14" width="44" height="36" fill="#0b1220" />
+                <rect x="22" y="18" width="36" height="28" fill="#f4f0e6" />
+                <circle cx="50" cy="32" r="5" fill="#12d4c4" />
               </svg>
             </button>
             <button type="button" class="match-cell" disabled>
               <small>C</small>
               <svg viewBox="0 0 80 64" class="match-svg">
-                <polygon points="18,46 40,14 62,46" fill="#0b1220" />
-                <polygon points="40,14 62,46 70,40 50,12" fill="#2a354c" />
-                <ellipse cx="40" cy="46" rx="22" ry="6" fill="#8b93a7" />
+                <rect x="18" y="14" width="44" height="36" fill="#0b1220" />
+                <rect x="22" y="18" width="36" height="28" fill="#f4f0e6" />
+                <circle cx="32" cy="32" r="5" fill="#12d4c4" />
+                <circle cx="48" cy="32" r="5" fill="#8b93a7" />
               </svg>
             </button>
             <button type="button" class="match-cell" disabled>
               <small>D</small>
               <svg viewBox="0 0 80 64" class="match-svg">
-                <polygon points="12,24 68,24 76,34 20,34" fill="#12d4c4" />
-                <polygon points="12,24 20,34 20,46 12,36" fill="#0b1220" />
-                <polygon points="20,34 76,34 76,46 20,46" fill="#2a354c" />
+                <rect x="18" y="14" width="44" height="36" fill="#0b1220" />
+                <rect x="22" y="30" width="36" height="12" fill="#2a354c" />
               </svg>
             </button>
           </div>
         </div>
-        <p class="pair-line">Same box as the stem, just turned · A</p>
+        <p class="pair-line">A is the exact duplicate.</p>
         <button type="button" class="cta" id="walk-next">Try one match</button>
       </section>
 
@@ -84,55 +88,41 @@
           <h2>Practice · your try</h2>
           <p>must finish first</p>
         </div>
-        <p class="stem">Which ONE is the same object?</p>
+        <p class="stem">Which ONE of FOUR is the exact duplicate?</p>
         <div class="match-practice">
           <div class="match-stem" aria-hidden="true">
             <svg viewBox="0 0 80 64" class="match-svg">
-              <polygon points="16,14 40,14 48,20 24,20" fill="#12d4c4" />
-              <polygon points="16,14 24,20 24,50 16,44" fill="#0b1220" />
-              <polygon points="24,20 48,20 48,36 24,36" fill="#2a354c" />
-              <polygon points="24,36 64,36 70,42 30,42" fill="#12d4c4" />
-              <polygon points="24,36 30,42 30,56 24,50" fill="#0b1220" />
-              <polygon points="30,42 70,42 70,56 30,56" fill="#2a354c" />
+              <rect x="16" y="12" width="14" height="40" fill="#0b1220" />
+              <rect x="16" y="38" width="36" height="14" fill="#2a354c" />
             </svg>
           </div>
           <div class="match-cells" id="try-choices">
             <button type="button" class="match-cell">
               <small>A</small>
               <svg viewBox="0 0 80 64" class="match-svg">
-                <ellipse cx="40" cy="18" rx="18" ry="7" fill="#8b93a7" />
-                <rect x="22" y="18" width="36" height="30" fill="#2a354c" />
-                <ellipse cx="40" cy="48" rx="18" ry="7" fill="#0b1220" />
+                <rect x="16" y="12" width="14" height="40" fill="#0b1220" />
+                <rect x="16" y="12" width="36" height="14" fill="#2a354c" />
               </svg>
             </button>
             <button type="button" class="match-cell">
               <small>B</small>
               <svg viewBox="0 0 80 64" class="match-svg">
-                <polygon points="18,46 40,14 62,46" fill="#0b1220" />
-                <polygon points="40,14 62,46 70,40 50,12" fill="#2a354c" />
-                <ellipse cx="40" cy="46" rx="22" ry="6" fill="#8b93a7" />
+                <rect x="16" y="12" width="14" height="28" fill="#0b1220" />
+                <rect x="16" y="38" width="36" height="14" fill="#2a354c" />
               </svg>
             </button>
             <button type="button" class="match-cell">
               <small>C</small>
               <svg viewBox="0 0 80 64" class="match-svg">
-                <polygon points="20,12 42,12 50,18 28,18" fill="#12d4c4" />
-                <polygon points="20,12 28,18 28,46 20,40" fill="#0b1220" />
-                <polygon points="28,18 50,18 50,32 28,32" fill="#2a354c" />
-                <polygon points="28,32 66,32 72,38 34,38" fill="#12d4c4" />
-                <polygon points="28,32 34,38 34,52 28,46" fill="#0b1220" />
-                <polygon points="34,38 72,38 72,52 34,52" fill="#2a354c" />
+                <rect x="16" y="12" width="14" height="40" fill="#0b1220" />
+                <rect x="16" y="38" width="36" height="14" fill="#2a354c" />
               </svg>
             </button>
             <button type="button" class="match-cell">
               <small>D</small>
               <svg viewBox="0 0 80 64" class="match-svg">
-                <polygon points="18,12 62,12 70,20 26,20" fill="#12d4c4" />
-                <polygon points="18,12 26,20 26,32 18,24" fill="#0b1220" />
-                <polygon points="26,20 70,20 70,32 26,32" fill="#2a354c" />
-                <polygon points="32,32 48,32 54,38 38,38" fill="#12d4c4" />
-                <polygon points="32,32 38,38 38,56 32,50" fill="#0b1220" />
-                <polygon points="38,38 54,38 54,56 38,56" fill="#2a354c" />
+                <rect x="16" y="12" width="14" height="40" fill="#0b1220" />
+                <rect x="30" y="38" width="36" height="14" fill="#2a354c" />
               </svg>
             </button>
           </div>
@@ -145,13 +135,13 @@
       <section class="sheet scroll" id="grid" hidden>
         <div class="sheet-head">
           <h2>Object Matching</h2>
-          <p>tap the match</p>
+          <p>42 items · exact copy</p>
         </div>
         <div class="rows" id="rows"></div>
       </section>
 
       <div class="page-foot">
-        <p class="keep">one sitting · keep going</p>
+        <p class="keep">one sitting · exact match</p>
         <p class="more" id="foot-more">practice first</p>
       </div>
     </main>

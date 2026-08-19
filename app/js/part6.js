@@ -11,7 +11,7 @@
   const clock = document.getElementById("clock");
   const items = window.JOBTEST_OBJECTS || [];
   const letters = ["A", "B", "C", "D"];
-  let remaining = 3 * 60 + 50;
+  let remaining = 5 * 60;
   let ticking = false;
 
   function paintClock() {
@@ -23,6 +23,7 @@
   function startClock() {
     if (ticking) return;
     ticking = true;
+    remaining = 5 * 60;
     paintClock();
     window.setInterval(function () {
       if (remaining <= 0) return;
@@ -51,6 +52,12 @@
   }
 
   items.forEach(function (item, index) {
+    if (index === 21) {
+      const mark = document.createElement("p");
+      mark.className = "page-mark";
+      mark.textContent = "page 2";
+      rows.appendChild(mark);
+    }
     const row = document.createElement("div");
     row.className = "match-row";
     const n = String(index + 1).padStart(2, "0");

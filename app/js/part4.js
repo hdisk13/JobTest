@@ -10,7 +10,8 @@
   const footMore = document.getElementById("foot-more");
   const clock = document.getElementById("clock");
   const items = window.JOBTEST_COMPUTATION || [];
-  let remaining = 4 * 60 + 40;
+  const letters = ["A", "B", "C", "D"];
+  let remaining = 6 * 60;
   let ticking = false;
 
   function paintClock() {
@@ -22,6 +23,7 @@
   function startClock() {
     if (ticking) return;
     ticking = true;
+    remaining = 6 * 60;
     paintClock();
     window.setInterval(function () {
       if (remaining <= 0) return;
@@ -50,18 +52,34 @@
   }
 
   items.forEach(function (item, index) {
+    if (index === 20) {
+      const mark = document.createElement("p");
+      mark.className = "page-mark";
+      mark.textContent = "page 2";
+      rows.appendChild(mark);
+    }
     const row = document.createElement("div");
     row.className = "comp-row";
     const n = String(index + 1).padStart(2, "0");
     const cells = item.choices
-      .map(function (choice) {
-        return '<button type="button" class="comp-cell">' + choice + "</button>";
+      .map(function (choice, i) {
+        return (
+          '<button type="button" class="comp-cell"><small>' +
+          letters[i] +
+          "</small>" +
+          choice +
+          "</button>"
+        );
       })
-      .concat(['<button type="button" class="comp-cell none">none of these</button>'])
+      .concat([
+        '<button type="button" class="comp-cell none"><small>E</small>none of these</button>'
+      ])
       .join("");
     row.innerHTML =
       '<div class="comp-stem"><span class="idx">' +
       n +
+      '</span><span class="op-tag">' +
+      item.op +
       '</span><p class="pair">' +
       item.stem +
       "</p></div><div class=\"comp-cells\">" +
