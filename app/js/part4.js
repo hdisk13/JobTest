@@ -1,13 +1,15 @@
 (function () {
-  const page = document.querySelector(".phone.power");
+  const page = document.querySelector(".phone.speed-grid");
   const walk = document.getElementById("walk");
   const tryCard = document.getElementById("try");
-  const live = document.getElementById("live");
+  const grid = document.getElementById("grid");
   const walkNext = document.getElementById("walk-next");
   const tryNext = document.getElementById("try-next");
   const tryChoices = document.getElementById("try-choices");
-  const liveChoices = document.getElementById("choices");
+  const rows = document.getElementById("rows");
+  const footMore = document.getElementById("foot-more");
   const clock = document.getElementById("clock");
+  const items = window.JOBTEST_COMPUTATION || [];
   let remaining = 4 * 60 + 40;
   let ticking = false;
 
@@ -29,32 +31,56 @@
   }
 
   function pickIn(group, button) {
-    group.querySelectorAll(".choice").forEach(function (choice) {
-      choice.classList.toggle("is-on", choice === button);
+    group.querySelectorAll(".comp-cell").forEach(function (cell) {
+      cell.classList.toggle("is-on", cell === button);
     });
   }
 
   function show(card, beat) {
-    [walk, tryCard, live].forEach(function (section) {
+    [walk, tryCard, grid].forEach(function (section) {
       const on = section === card;
       section.hidden = !on;
       section.classList.toggle("is-hidden", !on);
     });
     page.setAttribute("data-beat", beat);
-    if (beat === "live") startClock();
+    if (beat === "live") {
+      footMore.textContent = "↓ more below";
+      startClock();
+    }
   }
 
+  items.forEach(function (item, index) {
+    const row = document.createElement("div");
+    row.className = "comp-row";
+    const n = String(index + 1).padStart(2, "0");
+    const cells = item.choices
+      .map(function (choice) {
+        return '<button type="button" class="comp-cell">' + choice + "</button>";
+      })
+      .concat(['<button type="button" class="comp-cell none">none of these</button>'])
+      .join("");
+    row.innerHTML =
+      '<div class="comp-stem"><span class="idx">' +
+      n +
+      '</span><p class="pair">' +
+      item.stem +
+      "</p></div><div class=\"comp-cells\">" +
+      cells +
+      "</div>";
+    rows.appendChild(row);
+  });
+
+  rows.addEventListener("click", function (event) {
+    const button = event.target.closest(".comp-cell");
+    if (!button) return;
+    pickIn(button.parentElement, button);
+  });
+
   tryChoices.addEventListener("click", function (event) {
-    const button = event.target.closest(".choice");
+    const button = event.target.closest(".comp-cell");
     if (!button) return;
     pickIn(tryChoices, button);
     tryNext.disabled = false;
-  });
-
-  liveChoices.addEventListener("click", function (event) {
-    const button = event.target.closest(".choice");
-    if (!button) return;
-    pickIn(liveChoices, button);
   });
 
   walkNext.addEventListener("click", function () {
@@ -63,6 +89,6 @@
 
   tryNext.addEventListener("click", function () {
     if (tryNext.disabled) return;
-    show(live, "live");
+    show(grid, "live");
   });
 })();

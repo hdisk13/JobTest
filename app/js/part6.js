@@ -1,13 +1,16 @@
 (function () {
-  const page = document.querySelector(".phone.power");
+  const page = document.querySelector(".phone.speed-grid");
   const walk = document.getElementById("walk");
   const tryCard = document.getElementById("try");
-  const live = document.getElementById("live");
+  const grid = document.getElementById("grid");
   const walkNext = document.getElementById("walk-next");
   const tryNext = document.getElementById("try-next");
   const tryChoices = document.getElementById("try-choices");
-  const liveChoices = document.getElementById("choices");
+  const rows = document.getElementById("rows");
+  const footMore = document.getElementById("foot-more");
   const clock = document.getElementById("clock");
+  const items = window.JOBTEST_OBJECTS || [];
+  const letters = ["A", "B", "C", "D"];
   let remaining = 3 * 60 + 50;
   let ticking = false;
 
@@ -28,33 +31,62 @@
     }, 1000);
   }
 
-  function pickIn(group, button) {
-    group.querySelectorAll(".choice").forEach(function (choice) {
-      choice.classList.toggle("is-on", choice === button);
+  function pickIn(group, button, sel) {
+    group.querySelectorAll(sel).forEach(function (cell) {
+      cell.classList.toggle("is-on", cell === button);
     });
   }
 
   function show(card, beat) {
-    [walk, tryCard, live].forEach(function (section) {
+    [walk, tryCard, grid].forEach(function (section) {
       const on = section === card;
       section.hidden = !on;
       section.classList.toggle("is-hidden", !on);
     });
     page.setAttribute("data-beat", beat);
-    if (beat === "live") startClock();
+    if (beat === "live") {
+      footMore.textContent = "↓ more below";
+      startClock();
+    }
   }
 
-  tryChoices.addEventListener("click", function (event) {
-    const button = event.target.closest(".choice");
-    if (!button) return;
-    pickIn(tryChoices, button);
-    tryNext.disabled = false;
+  items.forEach(function (item, index) {
+    const row = document.createElement("div");
+    row.className = "match-row";
+    const n = String(index + 1).padStart(2, "0");
+    const cells = item.choices
+      .map(function (choice, i) {
+        return (
+          '<button type="button" class="match-cell"><small>' +
+          letters[i] +
+          "</small>" +
+          choice +
+          "</button>"
+        );
+      })
+      .join("");
+    row.innerHTML =
+      '<div class="match-head"><span class="idx">' +
+      n +
+      '</span><div class="match-stem">' +
+      item.stem +
+      "</div></div><div class=\"match-cells\">" +
+      cells +
+      "</div>";
+    rows.appendChild(row);
   });
 
-  liveChoices.addEventListener("click", function (event) {
-    const button = event.target.closest(".choice");
+  rows.addEventListener("click", function (event) {
+    const button = event.target.closest(".match-cell");
     if (!button) return;
-    pickIn(liveChoices, button);
+    pickIn(button.parentElement, button, ".match-cell");
+  });
+
+  tryChoices.addEventListener("click", function (event) {
+    const button = event.target.closest(".match-cell");
+    if (!button) return;
+    pickIn(tryChoices, button, ".match-cell");
+    tryNext.disabled = false;
   });
 
   walkNext.addEventListener("click", function () {
@@ -63,6 +95,6 @@
 
   tryNext.addEventListener("click", function () {
     if (tryNext.disabled) return;
-    show(live, "live");
+    show(grid, "live");
   });
 })();

@@ -13,15 +13,12 @@
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-    <main class="phone power" data-beat="walk">
+    <main class="phone sitting speed-grid" data-beat="walk">
       <div class="kicker-row">
         <p class="kicker teal">One sitting</p>
         <p class="kicker muted">Part 6 of 6</p>
       </div>
-      <h1 class="display title-power">Same object</h1>
-      <p class="lede light power-lede">
-        Object Matching. Invented demo — not an official AP item.
-      </p>
+      <h1 class="display title-grid">Same object</h1>
       <p class="badge teal demo-chip">Demo items, not the O*NET Ability Profiler.</p>
       <div class="clock-row">
         <p class="clock" id="clock">3:50</p>
@@ -34,49 +31,51 @@
           <h2>Practice · walked</h2>
           <p>same form</p>
         </div>
-        <p class="stem">Which ONE is the same object as the stem?</p>
-        <div class="space-prompt" aria-hidden="true">
-          <svg viewBox="0 0 120 78" class="space-svg">
-            <polygon points="38,18 78,18 92,32 52,32" fill="#12d4c4" />
-            <polygon points="38,18 52,32 52,62 38,48" fill="#0b1220" />
-            <polygon points="52,32 92,32 92,62 52,62" fill="#2a354c" />
-          </svg>
+        <p class="stem">Which ONE is the same object?</p>
+        <div class="match-practice">
+          <div class="match-stem" aria-hidden="true">
+            <svg viewBox="0 0 80 64" class="match-svg">
+              <polygon points="22,16 52,16 64,26 34,26" fill="#12d4c4" />
+              <polygon points="22,16 34,26 34,52 22,42" fill="#0b1220" />
+              <polygon points="34,26 64,26 64,52 34,52" fill="#2a354c" />
+            </svg>
+          </div>
+          <div class="match-cells" aria-hidden="true">
+            <button type="button" class="match-cell is-on" disabled>
+              <small>A</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <polygon points="18,18 46,12 62,22 34,28" fill="#12d4c4" />
+                <polygon points="18,18 34,28 34,54 18,44" fill="#0b1220" />
+                <polygon points="34,28 62,22 62,48 34,54" fill="#2a354c" />
+              </svg>
+            </button>
+            <button type="button" class="match-cell" disabled>
+              <small>B</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <ellipse cx="40" cy="18" rx="18" ry="7" fill="#8b93a7" />
+                <rect x="22" y="18" width="36" height="30" fill="#2a354c" />
+                <ellipse cx="40" cy="48" rx="18" ry="7" fill="#0b1220" />
+              </svg>
+            </button>
+            <button type="button" class="match-cell" disabled>
+              <small>C</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <polygon points="18,46 40,14 62,46" fill="#0b1220" />
+                <polygon points="40,14 62,46 70,40 50,12" fill="#2a354c" />
+                <ellipse cx="40" cy="46" rx="22" ry="6" fill="#8b93a7" />
+              </svg>
+            </button>
+            <button type="button" class="match-cell" disabled>
+              <small>D</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <polygon points="12,24 68,24 76,34 20,34" fill="#12d4c4" />
+                <polygon points="12,24 20,34 20,46 12,36" fill="#0b1220" />
+                <polygon points="20,34 76,34 76,46 20,46" fill="#2a354c" />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="choices" aria-hidden="true">
-          <button type="button" class="choice fig-row is-on" disabled>
-            <span>A</span>
-            <svg viewBox="0 0 90 70" class="space-svg">
-              <polygon points="22,16 58,16 72,28 36,28" fill="#12d4c4" />
-              <polygon points="22,16 36,28 36,56 22,44" fill="#0b1220" />
-              <polygon points="36,28 72,28 72,56 36,56" fill="#2a354c" />
-            </svg>
-          </button>
-          <button type="button" class="choice fig-row" disabled>
-            <span>B</span>
-            <svg viewBox="0 0 90 70" class="space-svg">
-              <ellipse cx="45" cy="20" rx="18" ry="7" fill="#8b93a7" />
-              <rect x="27" y="20" width="36" height="28" fill="#2a354c" />
-              <ellipse cx="45" cy="48" rx="18" ry="7" fill="#0b1220" />
-            </svg>
-          </button>
-          <button type="button" class="choice fig-row" disabled>
-            <span>C</span>
-            <svg viewBox="0 0 90 70" class="space-svg">
-              <polygon points="24,54 45,14 66,54" fill="#0b1220" />
-              <polygon points="45,14 66,54 72,48 52,12" fill="#2a354c" />
-              <ellipse cx="45" cy="54" rx="20" ry="6" fill="#8b93a7" />
-            </svg>
-          </button>
-          <button type="button" class="choice fig-row" disabled>
-            <span>D</span>
-            <svg viewBox="0 0 90 70" class="space-svg">
-              <polygon points="18,28 40,18 40,38 18,48" fill="#0b1220" />
-              <polygon points="40,18 62,28 62,48 40,38" fill="#12d4c4" />
-              <polygon points="18,48 40,38 62,48 40,58" fill="#2a354c" />
-            </svg>
-          </button>
-        </div>
-        <p class="pair-line">Same box as the stem, just a closer view · A</p>
+        <p class="pair-line">Same box as the stem, just turned · A</p>
         <button type="button" class="cta" id="walk-next">Try one match</button>
       </section>
 
@@ -85,117 +84,78 @@
           <h2>Practice · your try</h2>
           <p>must finish first</p>
         </div>
-        <p class="stem">Which ONE is the same object as the stem?</p>
-        <div class="space-prompt" aria-hidden="true">
-          <svg viewBox="0 0 120 78" class="space-svg">
-            <polygon points="28,36 50,22 72,36 50,50" fill="#12d4c4" />
-            <polygon points="28,36 50,50 50,68 28,54" fill="#0b1220" />
-            <polygon points="50,50 72,36 72,54 50,68" fill="#2a354c" />
-            <polygon points="50,22 84,16 96,26 72,36" fill="#8b93a7" />
-            <polygon points="72,36 96,26 96,44 72,54" fill="#0b1220" />
-          </svg>
-        </div>
-        <div class="choices" id="try-choices">
-          <button type="button" class="choice fig-row">
-            <span>A</span>
-            <svg viewBox="0 0 90 70" class="space-svg">
-              <ellipse cx="45" cy="22" rx="20" ry="7" fill="#8b93a7" />
-              <rect x="25" y="22" width="40" height="26" fill="#2a354c" />
-              <ellipse cx="45" cy="48" rx="20" ry="7" fill="#0b1220" />
+        <p class="stem">Which ONE is the same object?</p>
+        <div class="match-practice">
+          <div class="match-stem" aria-hidden="true">
+            <svg viewBox="0 0 80 64" class="match-svg">
+              <polygon points="16,14 40,14 48,20 24,20" fill="#12d4c4" />
+              <polygon points="16,14 24,20 24,50 16,44" fill="#0b1220" />
+              <polygon points="24,20 48,20 48,36 24,36" fill="#2a354c" />
+              <polygon points="24,36 64,36 70,42 30,42" fill="#12d4c4" />
+              <polygon points="24,36 30,42 30,56 24,50" fill="#0b1220" />
+              <polygon points="30,42 70,42 70,56 30,56" fill="#2a354c" />
             </svg>
-          </button>
-          <button type="button" class="choice fig-row">
-            <span>B</span>
-            <svg viewBox="0 0 90 70" class="space-svg">
-              <polygon points="24,54 45,16 66,54" fill="#0b1220" />
-              <polygon points="45,16 66,54 72,48 52,14" fill="#2a354c" />
-              <ellipse cx="45" cy="54" rx="22" ry="6" fill="#8b93a7" />
-            </svg>
-          </button>
-          <button type="button" class="choice fig-row">
-            <span>C</span>
-            <svg viewBox="0 0 90 70" class="space-svg">
-              <polygon points="16,34 36,22 56,34 36,46" fill="#12d4c4" />
-              <polygon points="16,34 36,46 36,62 16,50" fill="#0b1220" />
-              <polygon points="36,46 56,34 56,50 36,62" fill="#2a354c" />
-              <polygon points="36,22 68,16 80,26 56,34" fill="#8b93a7" />
-              <polygon points="56,34 80,26 80,42 56,50" fill="#0b1220" />
-            </svg>
-          </button>
-          <button type="button" class="choice fig-row">
-            <span>D</span>
-            <svg viewBox="0 0 90 70" class="space-svg">
-              <polygon points="20,18 48,10 48,52 20,60" fill="#0b1220" />
-              <polygon points="48,10 76,18 76,60 48,52" fill="#2a354c" />
-            </svg>
-          </button>
+          </div>
+          <div class="match-cells" id="try-choices">
+            <button type="button" class="match-cell">
+              <small>A</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <ellipse cx="40" cy="18" rx="18" ry="7" fill="#8b93a7" />
+                <rect x="22" y="18" width="36" height="30" fill="#2a354c" />
+                <ellipse cx="40" cy="48" rx="18" ry="7" fill="#0b1220" />
+              </svg>
+            </button>
+            <button type="button" class="match-cell">
+              <small>B</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <polygon points="18,46 40,14 62,46" fill="#0b1220" />
+                <polygon points="40,14 62,46 70,40 50,12" fill="#2a354c" />
+                <ellipse cx="40" cy="46" rx="22" ry="6" fill="#8b93a7" />
+              </svg>
+            </button>
+            <button type="button" class="match-cell">
+              <small>C</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <polygon points="20,12 42,12 50,18 28,18" fill="#12d4c4" />
+                <polygon points="20,12 28,18 28,46 20,40" fill="#0b1220" />
+                <polygon points="28,18 50,18 50,32 28,32" fill="#2a354c" />
+                <polygon points="28,32 66,32 72,38 34,38" fill="#12d4c4" />
+                <polygon points="28,32 34,38 34,52 28,46" fill="#0b1220" />
+                <polygon points="34,38 72,38 72,52 34,52" fill="#2a354c" />
+              </svg>
+            </button>
+            <button type="button" class="match-cell">
+              <small>D</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <polygon points="18,12 62,12 70,20 26,20" fill="#12d4c4" />
+                <polygon points="18,12 26,20 26,32 18,24" fill="#0b1220" />
+                <polygon points="26,20 70,20 70,32 26,32" fill="#2a354c" />
+                <polygon points="32,32 48,32 54,38 38,38" fill="#12d4c4" />
+                <polygon points="32,32 38,38 38,56 32,50" fill="#0b1220" />
+                <polygon points="38,38 54,38 54,56 38,56" fill="#2a354c" />
+              </svg>
+            </button>
+          </div>
         </div>
         <button type="button" class="cta practice-next" id="try-next" disabled>
-          Start Item 01
+          Start the sheet
         </button>
       </section>
 
-      <section class="sheet item-sheet is-hidden" id="live" hidden>
+      <section class="sheet scroll" id="grid" hidden>
         <div class="sheet-head">
-          <h2>Item 01</h2>
-          <p>tap one figure</p>
+          <h2>Object Matching</h2>
+          <p>tap the match</p>
         </div>
-        <p class="stem">Which ONE is the same object as the stem?</p>
-        <div class="space-prompt" aria-hidden="true">
-          <svg viewBox="0 0 120 78" class="space-svg">
-            <polygon points="44,12 76,12 88,22 56,22" fill="#12d4c4" />
-            <polygon points="44,12 56,22 56,40 44,30" fill="#0b1220" />
-            <polygon points="56,22 88,22 88,40 56,40" fill="#2a354c" />
-            <polygon points="32,40 56,40 68,50 44,50" fill="#12d4c4" />
-            <polygon points="32,40 44,50 44,68 32,58" fill="#0b1220" />
-            <polygon points="44,50 68,50 68,68 44,68" fill="#2a354c" />
-          </svg>
-        </div>
-        <div class="choices" id="choices">
-          <button type="button" class="choice fig-row">
-            <span>A</span>
-            <svg viewBox="0 0 90 70" class="space-svg">
-              <polygon points="18,22 40,14 58,22 36,30" fill="#8b93a7" />
-              <polygon points="18,22 36,30 36,52 18,44" fill="#0b1220" />
-              <polygon points="36,30 58,22 58,44 36,52" fill="#2a354c" />
-              <polygon points="36,52 58,44 72,50 50,58" fill="#12d4c4" />
-            </svg>
-          </button>
-          <button type="button" class="choice fig-row">
-            <span>B</span>
-            <svg viewBox="0 0 90 70" class="space-svg">
-              <polygon points="34,10 62,10 72,18 44,18" fill="#12d4c4" />
-              <polygon points="34,10 44,18 44,34 34,26" fill="#0b1220" />
-              <polygon points="44,18 72,18 72,34 44,34" fill="#2a354c" />
-              <polygon points="24,34 44,34 54,42 34,42" fill="#12d4c4" />
-              <polygon points="24,34 34,42 34,58 24,50" fill="#0b1220" />
-              <polygon points="34,42 54,42 54,58 34,58" fill="#2a354c" />
-            </svg>
-          </button>
-          <button type="button" class="choice fig-row">
-            <span>C</span>
-            <svg viewBox="0 0 90 70" class="space-svg">
-              <ellipse cx="45" cy="20" rx="18" ry="7" fill="#8b93a7" />
-              <rect x="27" y="20" width="36" height="28" fill="#2a354c" />
-              <ellipse cx="45" cy="48" rx="18" ry="7" fill="#0b1220" />
-            </svg>
-          </button>
-          <button type="button" class="choice fig-row">
-            <span>D</span>
-            <svg viewBox="0 0 90 70" class="space-svg">
-              <polygon points="24,54 45,16 66,54" fill="#0b1220" />
-              <polygon points="45,16 66,54 72,48 52,14" fill="#2a354c" />
-              <ellipse cx="45" cy="54" rx="22" ry="6" fill="#8b93a7" />
-            </svg>
-          </button>
-        </div>
+        <div class="rows" id="rows"></div>
       </section>
 
-      <p class="page-foot">
-        <span class="keep">one sitting · speeded part</span>
-      </p>
-      <a class="ghost" href="index.html">Back to launch</a>
+      <div class="page-foot">
+        <p class="keep">one sitting · keep going</p>
+        <p class="more" id="foot-more">practice first</p>
+      </div>
     </main>
+    <script src="js/objects.js"></script>
     <script src="js/part6.js"></script>
   </body>
 </html>

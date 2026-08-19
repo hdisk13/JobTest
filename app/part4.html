@@ -13,15 +13,12 @@
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-    <main class="phone power" data-beat="walk">
+    <main class="phone sitting speed-grid" data-beat="walk">
       <div class="kicker-row">
         <p class="kicker teal">One sitting</p>
         <p class="kicker muted">Part 4 of 6</p>
       </div>
-      <h1 class="display title-power">Plain numbers</h1>
-      <p class="lede light power-lede">
-        Computation. Invented demo — not an official AP item.
-      </p>
+      <h1 class="display title-grid">Plain numbers</h1>
       <p class="badge teal demo-chip">Demo items, not the O*NET Ability Profiler.</p>
       <div class="clock-row">
         <p class="clock" id="clock">4:40</p>
@@ -35,14 +32,14 @@
           <p>one answer</p>
         </div>
         <p class="stem">15 ÷ 3 =</p>
-        <div class="choices" aria-hidden="true">
-          <button type="button" class="choice is-on" disabled>A · 5</button>
-          <button type="button" class="choice" disabled>B · 6</button>
-          <button type="button" class="choice" disabled>C · 12</button>
-          <button type="button" class="choice" disabled>D · 18</button>
-          <button type="button" class="choice" disabled>E · none of these</button>
+        <div class="comp-cells" aria-hidden="true">
+          <button type="button" class="comp-cell is-on" disabled>5</button>
+          <button type="button" class="comp-cell" disabled>6</button>
+          <button type="button" class="comp-cell" disabled>12</button>
+          <button type="button" class="comp-cell" disabled>18</button>
+          <button type="button" class="comp-cell none" disabled>none of these</button>
         </div>
-        <p class="pair-line">15 divided by 3 is 5 · A</p>
+        <p class="pair-line">15 divided by 3 is 5</p>
         <button type="button" class="cta" id="walk-next">Try one item</button>
       </section>
 
@@ -52,38 +49,32 @@
           <p>must finish first</p>
         </div>
         <p class="stem">8 × 4 =</p>
-        <div class="choices" id="try-choices">
-          <button type="button" class="choice">A · 12</button>
-          <button type="button" class="choice">B · 24</button>
-          <button type="button" class="choice">C · 32</button>
-          <button type="button" class="choice">D · 36</button>
-          <button type="button" class="choice">E · none of these</button>
+        <div class="comp-cells" id="try-choices">
+          <button type="button" class="comp-cell">12</button>
+          <button type="button" class="comp-cell">24</button>
+          <button type="button" class="comp-cell">32</button>
+          <button type="button" class="comp-cell">36</button>
+          <button type="button" class="comp-cell none">none of these</button>
         </div>
         <button type="button" class="cta practice-next" id="try-next" disabled>
-          Start Item 01
+          Start the sheet
         </button>
       </section>
 
-      <section class="sheet item-sheet is-hidden" id="live" hidden>
+      <section class="sheet scroll" id="grid" hidden>
         <div class="sheet-head">
-          <h2>Item 01</h2>
-          <p>tap one answer</p>
+          <h2>Computation</h2>
+          <p>tap one · last is none</p>
         </div>
-        <p class="stem">13 × 4 =</p>
-        <div class="choices" id="choices">
-          <button type="button" class="choice">A · 48</button>
-          <button type="button" class="choice">B · 50</button>
-          <button type="button" class="choice">C · 54</button>
-          <button type="button" class="choice">D · 56</button>
-          <button type="button" class="choice">E · none of these</button>
-        </div>
+        <div class="rows" id="rows"></div>
       </section>
 
-      <p class="page-foot">
-        <span class="keep">one sitting · speeded part</span>
-      </p>
-      <a class="ghost" href="index.html">Back to launch</a>
+      <div class="page-foot">
+        <p class="keep">one sitting · keep going</p>
+        <p class="more" id="foot-more">practice first</p>
+      </div>
     </main>
+    <script src="js/computation.js"></script>
     <script src="js/part4.js"></script>
   </body>
 </html>
