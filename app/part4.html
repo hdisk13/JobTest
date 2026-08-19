@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Computation · JobTest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="phone power" data-beat="walk">
+      <div class="kicker-row">
+        <p class="kicker teal">One sitting</p>
+        <p class="kicker muted">Part 4 of 6</p>
+      </div>
+      <h1 class="display title-power">Plain numbers</h1>
+      <p class="lede light power-lede">
+        Computation. Invented demo — not an official AP item.
+      </p>
+      <p class="badge teal demo-chip">Demo items, not the O*NET Ability Profiler.</p>
+      <div class="clock-row">
+        <p class="clock" id="clock">4:40</p>
+        <p class="clock-note">demo clock · speeded</p>
+      </div>
+      <p class="clock-note">−1 per wrong. Skip if no idea. Meaning does not matter.</p>
+
+      <section class="sheet item-sheet" id="walk">
+        <div class="sheet-head">
+          <h2>Practice · walked</h2>
+          <p>one answer</p>
+        </div>
+        <p class="stem">15 ÷ 3 =</p>
+        <div class="choices" aria-hidden="true">
+          <button type="button" class="choice is-on" disabled>A · 5</button>
+          <button type="button" class="choice" disabled>B · 6</button>
+          <button type="button" class="choice" disabled>C · 12</button>
+          <button type="button" class="choice" disabled>D · 18</button>
+          <button type="button" class="choice" disabled>E · none of these</button>
+        </div>
+        <p class="pair-line">15 divided by 3 is 5 · A</p>
+        <button type="button" class="cta" id="walk-next">Try one item</button>
+      </section>
+
+      <section class="sheet item-sheet is-hidden" id="try" hidden>
+        <div class="sheet-head">
+          <h2>Practice · your try</h2>
+          <p>must finish first</p>
+        </div>
+        <p class="stem">8 × 4 =</p>
+        <div class="choices" id="try-choices">
+          <button type="button" class="choice">A · 12</button>
+          <button type="button" class="choice">B · 24</button>
+          <button type="button" class="choice">C · 32</button>
+          <button type="button" class="choice">D · 36</button>
+          <button type="button" class="choice">E · none of these</button>
+        </div>
+        <button type="button" class="cta practice-next" id="try-next" disabled>
+          Start Item 01
+        </button>
+      </section>
+
+      <section class="sheet item-sheet is-hidden" id="live" hidden>
+        <div class="sheet-head">
+          <h2>Item 01</h2>
+          <p>tap one answer</p>
+        </div>
+        <p class="stem">13 × 4 =</p>
+        <div class="choices" id="choices">
+          <button type="button" class="choice">A · 48</button>
+          <button type="button" class="choice">B · 50</button>
+          <button type="button" class="choice">C · 54</button>
+          <button type="button" class="choice">D · 56</button>
+          <button type="button" class="choice">E · none of these</button>
+        </div>
+      </section>
+
+      <p class="page-foot">
+        <span class="keep">one sitting · speeded part</span>
+      </p>
+      <a class="ghost" href="index.html">Back to launch</a>
+    </main>
+    <script src="js/part4.js"></script>
+  </body>
+</html>
