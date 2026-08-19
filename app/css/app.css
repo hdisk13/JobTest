@@ -1133,12 +1133,25 @@ button {
   text-transform: uppercase;
 }
 
-.op-group {
-  margin: 12px 4px 0;
+.comp-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(20, auto);
+  grid-auto-flow: column;
+  column-gap: 10px;
 }
 
-.op-group:first-child {
-  margin-top: 0;
+.comp-page .comp-row {
+  padding: 8px 0;
+}
+
+.comp-page .comp-cell {
+  min-height: 36px;
+  font-size: 11px;
+}
+
+.comp-page .comp-cell.none {
+  font-size: 7px;
 }
 
 .speed-grid .sheet.scroll[hidden],
