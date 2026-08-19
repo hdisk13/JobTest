@@ -943,6 +943,51 @@ button {
   background: var(--teal);
 }
 
+.word-pick.is-wait {
+  border-style: dashed;
+}
+
+.word-grid.has-pair .word-pick.is-wait {
+  display: none;
+}
+
+.pair-board {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pair-object {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-height: 56px;
+  padding: 10px 14px;
+  border: 2.5px solid var(--ink);
+  border-radius: 12px;
+  background: #12d4c4;
+  box-shadow: 2px 2px 0 var(--ink);
+  color: var(--ink);
+  text-align: left;
+}
+
+.pair-object span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pair-object strong {
+  font-size: 16px;
+}
+
+.pair-object.is-hidden {
+  display: none;
+}
+
 .pair-line {
   margin: 12px 4px 0;
   color: #0ea89c;
@@ -1010,15 +1055,16 @@ button {
 }
 
 .badge.demo-chip {
+  display: inline-flex;
+  width: auto;
+  max-width: fit-content;
   margin-top: 12px;
-  max-width: 100%;
-  padding: 3px 8px;
+  padding: 2px 8px;
   background: #12d4c4;
   color: var(--ink);
-  font-size: 9px;
-  line-height: 1.2;
-  white-space: normal;
-  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 .word-pick small {
@@ -1036,13 +1082,6 @@ button {
 .word-pick:disabled,
 .choice:disabled {
   opacity: 1;
-}
-
-.sitting-plan {
-  margin: 0 0 18px;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 600;
 }
 
 @media (min-width: 430px) {
