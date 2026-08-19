@@ -1097,8 +1097,37 @@ button {
 .speed-grid .clock-row,
 .speed-grid .speed-chip,
 .speed-grid .score-quiet,
-.speed-grid .page-foot {
+.speed-grid .page-foot,
+.speed-grid .sit-next,
+.speed-grid .lede {
   flex-shrink: 0;
+}
+
+.sit-next {
+  margin-top: 12px;
+}
+
+.sit-next.is-hidden,
+.sit-next[hidden] {
+  display: none;
+}
+
+.scratch {
+  margin: 0 4px 10px;
+  min-height: 40px;
+  border: 1.5px dashed var(--line);
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.scratch span {
+  display: block;
+  padding: 6px 8px 0;
+  color: #8a8490;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .speed-chip {

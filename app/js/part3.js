@@ -7,6 +7,7 @@
   const tryNext = document.getElementById("try-next");
   const tryChoices = document.getElementById("try-choices");
   const liveChoices = document.getElementById("choices");
+  const partNext = document.getElementById("part-next");
 
   function pickIn(group, button) {
     group.querySelectorAll(".choice").forEach(function (choice) {
@@ -34,6 +35,7 @@
     const button = event.target.closest(".choice");
     if (!button) return;
     pickIn(liveChoices, button);
+    partNext.disabled = false;
   });
 
   walkNext.addEventListener("click", function () {
@@ -43,5 +45,10 @@
   tryNext.addEventListener("click", function () {
     if (tryNext.disabled) return;
     show(live, "live");
+  });
+
+  partNext.addEventListener("click", function () {
+    if (partNext.disabled) return;
+    window.location.href = "break.html";
   });
 })();

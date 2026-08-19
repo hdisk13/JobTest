@@ -9,6 +9,7 @@
   const rows = document.getElementById("rows");
   const footMore = document.getElementById("foot-more");
   const clock = document.getElementById("clock");
+  const partNext = document.getElementById("part-next");
   const items = window.JOBTEST_OBJECTS || [];
   const letters = ["A", "B", "C", "D"];
   let remaining = 5 * 60;
@@ -47,6 +48,8 @@
     page.setAttribute("data-beat", beat);
     if (beat === "live") {
       footMore.textContent = "↓ more below";
+      partNext.hidden = false;
+      partNext.classList.remove("is-hidden");
       startClock();
     }
   }

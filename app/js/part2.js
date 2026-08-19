@@ -5,6 +5,7 @@
   const live = document.getElementById("live");
   const walkNext = document.getElementById("walk-next");
   const tryNext = document.getElementById("try-next");
+  const partNext = document.getElementById("part-next");
 
   function bindBoard(grid, object, onReady) {
     function picks() {
@@ -68,7 +69,9 @@
   bindBoard(document.getElementById("try-choices"), document.getElementById("try-object"), function (ready) {
     tryNext.disabled = !ready;
   });
-  bindBoard(document.getElementById("live-choices"), document.getElementById("live-object"));
+  bindBoard(document.getElementById("live-choices"), document.getElementById("live-object"), function (ready) {
+    partNext.disabled = !ready;
+  });
 
   walkNext.addEventListener("click", function () {
     show(tryCard, "try");
@@ -77,5 +80,10 @@
   tryNext.addEventListener("click", function () {
     if (tryNext.disabled) return;
     show(live, "live");
+  });
+
+  partNext.addEventListener("click", function () {
+    if (partNext.disabled) return;
+    window.location.href = "part3.html";
   });
 })();

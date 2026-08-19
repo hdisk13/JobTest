@@ -5,6 +5,7 @@
   const practiceChoices = document.getElementById("practice-choices");
   const liveChoices = document.getElementById("choices");
   const next = document.getElementById("practice-next");
+  const partNext = document.getElementById("part-next");
 
   function pickIn(group, button) {
     group.querySelectorAll(".choice").forEach(function (choice) {
@@ -32,5 +33,11 @@
     const button = event.target.closest(".choice");
     if (!button) return;
     pickIn(liveChoices, button);
+    partNext.disabled = false;
+  });
+
+  partNext.addEventListener("click", function () {
+    if (partNext.disabled) return;
+    window.location.href = "part2.html";
   });
 })();

@@ -17,8 +17,8 @@
 
   const stay = document.getElementById("stay");
   if (stay) {
-    stay.addEventListener("click", function (event) {
-      event.preventDefault();
+    stay.addEventListener("click", function () {
+      window.location.href = "part4.html";
     });
   }
 })();
