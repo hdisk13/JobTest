@@ -180,7 +180,7 @@ button {
 .sample-tag {
   margin-top: 12px;
   background: var(--teal);
-  color: var(--ink);
+  color: #ffffff;
 }
 
 .claim-line {
@@ -439,6 +439,12 @@ button {
 .paper-job .badge {
   flex-shrink: 0;
   margin-top: 2px;
+}
+
+.empty-step {
+  margin-top: 10px;
+  color: #8a8490;
+  font-size: 12px;
 }
 
 .start-with {
