@@ -201,12 +201,6 @@ button {
   color: #f4f0e6;
 }
 
-.badge.sample-tag {
-  margin-top: 12px;
-  background: var(--teal);
-  color: var(--ink);
-}
-
 .claim-line {
   margin: 8px 0 0;
   color: var(--muted);
@@ -251,6 +245,12 @@ button {
 
 .badge.teal {
   background: var(--teal);
+}
+
+.badge.sample-tag {
+  margin-top: 12px;
+  background: #12d4c4;
+  color: var(--ink);
 }
 
 .badge.ink {
