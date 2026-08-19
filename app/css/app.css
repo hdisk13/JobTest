@@ -7,7 +7,7 @@
   --muted: #8b93a7;
   --white: #ffffff;
   --line: rgba(11, 18, 32, 0.2);
-  --font-display: "Unbounded", "Anton", Impact, sans-serif;
+  --font-display: "Anton", Impact, sans-serif;
   --font-ui: "DM Sans", "Helvetica Neue", Arial, sans-serif;
   --phone: 390px;
 }
@@ -76,23 +76,25 @@ button {
 }
 
 .display {
-  margin: 8px 0 0;
+  margin: 10px 0 0;
   font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 0.92;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 0.9;
+  text-wrap: balance;
 }
 
 .title-grid {
-  font-size: 38px;
+  font-size: 42px;
+  white-space: nowrap;
 }
 
 .title-mix {
-  font-size: 52px;
+  font-size: 58px;
 }
 
 .title-break {
-  font-size: 48px;
+  font-size: 52px;
 }
 
 .phone.sitting {
@@ -118,22 +120,22 @@ button {
 .clock-row {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin-top: 14px;
+  gap: 10px;
+  margin-top: 12px;
 }
 
 .clock {
   margin: 0;
   color: var(--teal);
   font-family: var(--font-display);
-  font-size: 64px;
-  font-weight: 800;
-  letter-spacing: -0.05em;
-  line-height: 0.82;
+  font-size: 72px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.78;
 }
 
 .clock-meta {
-  padding-top: 8px;
+  padding-top: 6px;
 }
 
 .badge {
@@ -174,15 +176,16 @@ button {
 
 .pips {
   display: grid;
-  grid-template-columns: repeat(18, 1fr);
-  gap: 4px;
-  margin: 16px 0 18px;
+  grid-template-columns: repeat(18, minmax(0, 1fr));
+  gap: 3px;
+  margin: 14px 0 16px;
 }
 
 .pip {
-  height: 9px;
+  height: 10px;
+  min-width: 0;
   border-radius: 3px;
-  background: #161e30;
+  background: #2a354c;
 }
 
 .pip.lime {
@@ -242,9 +245,10 @@ button {
 
 .pair {
   margin: 0;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
 .cells {
@@ -253,15 +257,15 @@ button {
 }
 
 .cell {
-  min-width: 52px;
-  height: 28px;
+  min-width: 54px;
+  height: 30px;
   padding: 0 7px;
-  border: 2px solid var(--ink);
-  border-radius: 7px;
+  border: 2.5px solid var(--ink);
+  border-radius: 8px;
   background: var(--white);
   box-shadow: 2px 2px 0 var(--ink);
   color: var(--ink);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.04em;
 }
@@ -355,9 +359,9 @@ button {
 .home-brand {
   margin: 10px 0 0;
   font-family: var(--font-display);
-  font-size: 56px;
-  font-weight: 800;
-  letter-spacing: -0.05em;
+  font-size: 58px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   line-height: 0.86;
 }
 
@@ -397,7 +401,12 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 12px;
+  gap: 10px;
+}
+
+.section-head .toggle {
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .section h2 {
@@ -461,9 +470,9 @@ button {
 
 .score {
   font-family: var(--font-display);
-  font-size: 34px;
-  font-weight: 800;
-  letter-spacing: -0.05em;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   line-height: 0.9;
 }
 
