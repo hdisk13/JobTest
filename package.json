@@ -1,0 +1,16 @@
+{
+  "name": "jobtest",
+  "private": true,
+  "type": "module",
+  "description": "JobTest career-exploration matcher — O*NET 30.3 OAPs, 2010 6-score linker",
+  "scripts": {
+    "test": "tsx --test lib/*.test.ts && python3 scripts/test_rebuild_oap.py",
+    "rebuild-oap": "python3 scripts/rebuild_oap.py",
+    "demo-match": "tsx scripts/demo_match.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
