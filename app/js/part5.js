@@ -30,6 +30,8 @@
   var names = window.JOBTEST_NAMES || [];
   var remaining = 6 * 60;
   var ticking = false;
+  var stopped = false;
+  var timer = null;
 
   function paintClock() {
     if (!clock) return;
@@ -38,15 +40,29 @@
     clock.textContent = minutes + ":" + String(seconds).padStart(2, "0");
   }
 
+  function stopLive() {
+    if (stopped) return;
+    stopped = true;
+    remaining = 0;
+    paintClock();
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+    reveal(partNext);
+  }
+
   function startClock() {
     if (ticking || !clock) return;
     ticking = true;
+    stopped = false;
     remaining = 6 * 60;
     paintClock();
-    window.setInterval(function () {
+    timer = window.setInterval(function () {
       if (remaining <= 0) return;
       remaining -= 1;
       paintClock();
+      if (remaining <= 0) stopLive();
     }, 1000);
   }
 
@@ -62,7 +78,6 @@
   function openLive() {
     reveal(clockRow);
     startClock();
-    reveal(partNext);
     if (footMore) footMore.textContent = "↓ more below";
   }
 
@@ -110,6 +125,7 @@
     });
 
     rows.addEventListener("click", function (event) {
+      if (stopped) return;
       var button = event.target.closest(".cell");
       if (!button) return;
       pickIn(button.parentElement, button);

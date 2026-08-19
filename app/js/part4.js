@@ -29,6 +29,8 @@
   const letters = ["A", "B", "C", "D"];
   let remaining = 6 * 60;
   let ticking = false;
+  let stopped = false;
+  let timer = null;
 
   function reveal(el) {
     if (!el) return;
@@ -46,15 +48,29 @@
     clock.textContent = minutes + ":" + String(seconds).padStart(2, "0");
   }
 
+  function stopLive() {
+    if (stopped) return;
+    stopped = true;
+    remaining = 0;
+    paintClock();
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+    reveal(partNext);
+  }
+
   function startClock() {
     if (ticking || !clock) return;
     ticking = true;
+    stopped = false;
     remaining = 6 * 60;
     paintClock();
-    window.setInterval(function () {
+    timer = window.setInterval(function () {
       if (remaining <= 0) return;
       remaining -= 1;
       paintClock();
+      if (remaining <= 0) stopLive();
     }, 1000);
   }
 
@@ -75,7 +91,6 @@
       if (footMore) footMore.textContent = "↓ more below";
       reveal(clockRow);
       startClock();
-      reveal(partNext);
     }
   }
 
@@ -111,6 +126,7 @@
   });
 
   rows.addEventListener("click", function (event) {
+    if (stopped) return;
     const button = event.target.closest(".comp-cell");
     if (!button) return;
     pickIn(button.parentElement, button);
