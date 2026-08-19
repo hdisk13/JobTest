@@ -4,13 +4,20 @@
   let remaining = 5 * 60;
   let timer = null;
 
-  if (stay) stay.disabled = true;
-
   function paintClock() {
     if (!clock) return;
     const minutes = Math.floor(remaining / 60);
     const seconds = remaining % 60;
     clock.textContent = minutes + ":" + String(seconds).padStart(2, "0");
+  }
+
+  function reveal(el) {
+    if (!el) return;
+    el.classList.remove("is-hidden");
+    el.removeAttribute("hidden");
+    el.hidden = false;
+    el.disabled = false;
+    el.setAttribute("aria-hidden", "false");
   }
 
   function unlock() {
@@ -20,7 +27,7 @@
       clearInterval(timer);
       timer = null;
     }
-    if (stay) stay.disabled = false;
+    reveal(stay);
   }
 
   paintClock();
@@ -32,8 +39,11 @@
   }, 1000);
 
   if (stay) {
-    stay.addEventListener("click", function () {
-      if (stay.disabled) return;
+    stay.addEventListener("click", function (event) {
+      if (stay.hidden || stay.classList.contains("is-hidden")) {
+        event.preventDefault();
+        return;
+      }
       window.location.href = "part4.html";
     });
   }
