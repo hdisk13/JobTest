@@ -40,20 +40,22 @@
         </div>
         <div class="choices" aria-hidden="true">
           <button type="button" class="choice fig-row is-on" disabled>
-            <span>A · folded</span>
+            <span>A</span>
             <svg viewBox="0 0 90 70" class="space-svg">
               <polygon points="20,18 48,10 48,52 20,60" fill="#0b1220" />
               <polygon points="48,10 76,18 76,60 48,52" fill="#2a354c" />
             </svg>
           </button>
           <button type="button" class="choice fig-row" disabled>
-            <span>B · flat</span>
+            <span>B</span>
             <svg viewBox="0 0 90 70" class="space-svg">
-              <rect x="16" y="22" width="58" height="26" fill="#0b1220" />
+              <polygon points="22,28 45,14 68,28 45,42" fill="#12d4c4" />
+              <polygon points="22,28 45,42 45,62 22,48" fill="#0b1220" />
+              <polygon points="45,42 68,28 68,48 45,62" fill="#2a354c" />
             </svg>
           </button>
           <button type="button" class="choice fig-row" disabled>
-            <span>C · tube</span>
+            <span>C</span>
             <svg viewBox="0 0 90 70" class="space-svg">
               <ellipse cx="45" cy="22" rx="22" ry="8" fill="#8b93a7" />
               <rect x="23" y="22" width="44" height="28" fill="#2a354c" />
@@ -61,9 +63,11 @@
             </svg>
           </button>
           <button type="button" class="choice fig-row" disabled>
-            <span>D · peak</span>
+            <span>D</span>
             <svg viewBox="0 0 90 70" class="space-svg">
-              <polygon points="18,56 45,14 72,56" fill="#0b1220" />
+              <polygon points="24,54 45,16 66,54" fill="#0b1220" />
+              <polygon points="45,16 66,54 72,48 52,14" fill="#2a354c" />
+              <ellipse cx="45" cy="54" rx="22" ry="6" fill="#8b93a7" />
             </svg>
           </button>
         </div>
@@ -89,7 +93,9 @@
           <button type="button" class="choice fig-row">
             <span>A</span>
             <svg viewBox="0 0 90 70" class="space-svg">
-              <circle cx="45" cy="35" r="20" fill="#0b1220" />
+              <polygon points="22,28 45,14 68,28 45,42" fill="#12d4c4" />
+              <polygon points="22,28 45,42 45,62 22,48" fill="#0b1220" />
+              <polygon points="45,42 68,28 68,48 45,62" fill="#2a354c" />
             </svg>
           </button>
           <button type="button" class="choice fig-row">
@@ -103,13 +109,17 @@
           <button type="button" class="choice fig-row">
             <span>C</span>
             <svg viewBox="0 0 90 70" class="space-svg">
-              <polygon points="20,56 45,16 70,56" fill="#0b1220" />
+              <ellipse cx="45" cy="22" rx="20" ry="7" fill="#8b93a7" />
+              <rect x="25" y="22" width="40" height="26" fill="#2a354c" />
+              <ellipse cx="45" cy="48" rx="20" ry="7" fill="#0b1220" />
             </svg>
           </button>
           <button type="button" class="choice fig-row">
             <span>D</span>
             <svg viewBox="0 0 90 70" class="space-svg">
-              <rect x="28" y="16" width="34" height="38" fill="#0b1220" />
+              <polygon points="24,54 45,16 66,54" fill="#0b1220" />
+              <polygon points="45,16 66,54 72,48 52,14" fill="#2a354c" />
+              <ellipse cx="45" cy="54" rx="22" ry="6" fill="#8b93a7" />
             </svg>
           </button>
         </div>
@@ -123,13 +133,16 @@
           <h2>Item 01</h2>
           <p>tap one figure</p>
         </div>
-        <p class="stem">Which ONE of FOUR figures can this 2-D form make?</p>
+        <p class="stem">Which ONE of FOUR 3-D figures can this 2-D form make?</p>
         <div class="space-prompt" aria-hidden="true">
           <svg viewBox="0 0 120 90" class="space-svg">
             <rect x="42" y="10" width="28" height="24" fill="#0b1220" />
             <rect x="14" y="34" width="28" height="24" fill="#2a354c" />
             <rect x="42" y="34" width="28" height="24" fill="#0b1220" />
             <rect x="70" y="34" width="28" height="24" fill="#2a354c" />
+            <line x1="42" y1="34" x2="70" y2="34" stroke="#12d4c4" stroke-width="2" stroke-dasharray="4 3" />
+            <line x1="42" y1="34" x2="42" y2="58" stroke="#12d4c4" stroke-width="2" stroke-dasharray="4 3" />
+            <line x1="70" y1="34" x2="70" y2="58" stroke="#12d4c4" stroke-width="2" stroke-dasharray="4 3" />
           </svg>
         </div>
         <div class="choices" id="choices">
@@ -152,13 +165,16 @@
           <button type="button" class="choice fig-row">
             <span>C</span>
             <svg viewBox="0 0 90 70" class="space-svg">
-              <circle cx="45" cy="35" r="18" fill="#0b1220" />
+              <polygon points="20,18 48,10 48,52 20,60" fill="#0b1220" />
+              <polygon points="48,10 76,18 76,60 48,52" fill="#2a354c" />
             </svg>
           </button>
           <button type="button" class="choice fig-row">
             <span>D</span>
             <svg viewBox="0 0 90 70" class="space-svg">
-              <polygon points="18,54 45,14 72,54" fill="#0b1220" />
+              <polygon points="18,20 36,12 36,50 18,58" fill="#0b1220" />
+              <polygon points="36,12 54,20 54,58 36,50" fill="#12d4c4" />
+              <polygon points="54,20 72,12 72,50 54,58" fill="#2a354c" />
             </svg>
           </button>
         </div>

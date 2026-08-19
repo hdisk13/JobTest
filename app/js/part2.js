@@ -6,58 +6,32 @@
   const walkNext = document.getElementById("walk-next");
   const tryNext = document.getElementById("try-next");
 
-  function bindBoard(grid, object, onReady) {
-    function picks() {
-      return Array.prototype.slice.call(grid.querySelectorAll(".word-pick.is-wait"));
-    }
+  function selected(group) {
+    return Array.prototype.slice.call(group.querySelectorAll(".word-pick.is-on"));
+  }
 
-    function paint() {
-      const chosen = picks();
-      const ready = chosen.length === 2;
-      grid.classList.toggle("has-pair", ready);
-      object.classList.toggle("is-hidden", !ready);
-      if (ready) {
-        const ordered = chosen.slice().sort(function (a, b) {
-          return a.getAttribute("data-letter").localeCompare(b.getAttribute("data-letter"));
-        });
-        object.innerHTML =
-          "<span>" +
-          ordered[0].getAttribute("data-letter") +
-          "–" +
-          ordered[1].getAttribute("data-letter") +
-          "</span><strong>" +
-          ordered[0].getAttribute("data-word") +
-          " · " +
-          ordered[1].getAttribute("data-word") +
-          "</strong>";
-      } else {
-        object.textContent = "";
-      }
-      if (onReady) onReady(ready);
-    }
+  function pairLabel(buttons) {
+    if (buttons.length !== 2) return "Pair —";
+    const letters = buttons
+      .map(function (button) {
+        return button.getAttribute("data-letter");
+      })
+      .sort();
+    return "Pair " + letters[0] + "–" + letters[1];
+  }
 
-    function clearPair() {
-      grid.querySelectorAll(".word-pick").forEach(function (button) {
-        button.classList.remove("is-wait");
-      });
-      paint();
-    }
-
-    grid.addEventListener("click", function (event) {
+  function bindPair(group, readout, onReady) {
+    group.addEventListener("click", function (event) {
       const button = event.target.closest(".word-pick");
       if (!button || button.disabled) return;
-      const chosen = picks();
-      if (chosen.length === 2) return;
-      if (button.classList.contains("is-wait")) {
-        button.classList.remove("is-wait");
-      } else {
-        button.classList.add("is-wait");
+      if (button.classList.contains("is-on")) {
+        button.classList.remove("is-on");
+      } else if (selected(group).length < 2) {
+        button.classList.add("is-on");
       }
-      paint();
-    });
-
-    object.addEventListener("click", function () {
-      clearPair();
+      const picks = selected(group);
+      readout.textContent = pairLabel(picks);
+      if (onReady) onReady(picks.length === 2);
     });
   }
 
@@ -70,10 +44,10 @@
     page.setAttribute("data-beat", beat);
   }
 
-  bindBoard(document.getElementById("try-choices"), document.getElementById("try-object"), function (ready) {
+  bindPair(document.getElementById("try-choices"), document.getElementById("try-pair"), function (ready) {
     tryNext.disabled = !ready;
   });
-  bindBoard(document.getElementById("live-choices"), document.getElementById("live-object"));
+  bindPair(document.getElementById("live-choices"), document.getElementById("live-pair"));
 
   walkNext.addEventListener("click", function () {
     show(tryCard, "try");
