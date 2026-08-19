@@ -979,6 +979,29 @@ button {
   height: 72px;
 }
 
+.choice.fig-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 56px;
+  height: auto;
+  padding: 8px 12px;
+}
+
+.choice.fig-row .space-svg {
+  width: 56px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.break-stay {
+  margin: 16px 0 18px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 @media (min-width: 430px) {
   body {
     background: #070b14;

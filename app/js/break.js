@@ -14,4 +14,11 @@
     remaining -= 1;
     paintClock();
   }, 1000);
+
+  const stay = document.getElementById("stay");
+  if (stay) {
+    stay.addEventListener("click", function (event) {
+      event.preventDefault();
+    });
+  }
 })();
