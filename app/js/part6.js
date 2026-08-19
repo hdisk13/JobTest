@@ -52,12 +52,6 @@
   }
 
   items.forEach(function (item, index) {
-    if (index === 21) {
-      const mark = document.createElement("p");
-      mark.className = "page-mark";
-      mark.textContent = "page 2";
-      rows.appendChild(mark);
-    }
     const row = document.createElement("div");
     row.className = "match-row";
     const n = String(index + 1).padStart(2, "0");

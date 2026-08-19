@@ -51,41 +51,46 @@
     }
   }
 
-  items.forEach(function (item, index) {
-    if (index === 20) {
-      const mark = document.createElement("p");
-      mark.className = "page-mark";
-      mark.textContent = "page 2";
-      rows.appendChild(mark);
-    }
-    const row = document.createElement("div");
-    row.className = "comp-row";
-    const n = String(index + 1).padStart(2, "0");
-    const cells = item.choices
-      .map(function (choice, i) {
-        return (
-          '<button type="button" class="comp-cell"><small>' +
-          letters[i] +
-          "</small>" +
-          choice +
-          "</button>"
-        );
-      })
-      .concat([
-        '<button type="button" class="comp-cell none"><small>E</small>none of these</button>'
-      ])
-      .join("");
-    row.innerHTML =
-      '<div class="comp-stem"><span class="idx">' +
-      n +
-      '</span><span class="op-tag">' +
-      item.op +
-      '</span><p class="pair">' +
-      item.stem +
-      "</p></div><div class=\"comp-cells\">" +
-      cells +
-      "</div>";
-    rows.appendChild(row);
+  const groups = ["ADD", "SUBTRACT", "MULTIPLY", "DIVIDE"];
+  let index = 0;
+  groups.forEach(function (op) {
+    const group = items.filter(function (item) {
+      return item.op === op;
+    });
+    if (!group.length) return;
+    const head = document.createElement("p");
+    head.className = "op-group";
+    head.textContent = op;
+    rows.appendChild(head);
+    group.forEach(function (item) {
+      const row = document.createElement("div");
+      row.className = "comp-row";
+      const n = String(index + 1).padStart(2, "0");
+      index += 1;
+      const cells = item.choices
+        .map(function (choice, i) {
+          return (
+            '<button type="button" class="comp-cell"><small>' +
+            letters[i] +
+            "</small>" +
+            choice +
+            "</button>"
+          );
+        })
+        .concat([
+          '<button type="button" class="comp-cell none"><small>E</small>none of these</button>'
+        ])
+        .join("");
+      row.innerHTML =
+        '<div class="comp-stem"><span class="idx">' +
+        n +
+        '</span><p class="pair">' +
+        item.stem +
+        "</p></div><div class=\"comp-cells\">" +
+        cells +
+        "</div>";
+      rows.appendChild(row);
+    });
   });
 
   rows.addEventListener("click", function (event) {
