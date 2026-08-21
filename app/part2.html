@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vocabulary · JobTest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="phone power" data-beat="walk">
+      <div class="kicker-row">
+        <p class="kicker teal">One sitting</p>
+        <p class="kicker muted">Part 2 of 6</p>
+      </div>
+      <h1 class="display title-power">Two words</h1>
+      <p class="lede light power-lede">
+        Vocabulary. Invented demo — not an official AP item.
+      </p>
+      <p class="badge teal demo-chip">Demo items, not the O*NET Ability Profiler.</p>
+      <p class="score-quiet">Answer every item. No wrong-answer penalty.</p>
+
+      <section class="sheet item-sheet" id="walk">
+        <div class="sheet-head">
+          <h2>Practice · walked</h2>
+          <p>one pair</p>
+        </div>
+        <p class="stem">Which TWO have the SAME or OPPOSITE meaning?</p>
+        <div class="word-grid">
+          <button type="button" class="word-pick is-on" disabled data-letter="A">
+            <small>A</small>warm
+          </button>
+          <button type="button" class="word-pick is-on" disabled data-letter="B">
+            <small>B</small>cold
+          </button>
+          <button type="button" class="word-pick" disabled data-letter="C">
+            <small>C</small>table
+          </button>
+          <button type="button" class="word-pick" disabled data-letter="D">
+            <small>D</small>pencil
+          </button>
+        </div>
+        <p class="pair-line">Warm and cold are one pair (opposite) · A–B</p>
+        <button type="button" class="cta" id="walk-next">Try one pair</button>
+      </section>
+
+      <section class="sheet item-sheet is-hidden" id="try" hidden>
+        <div class="sheet-head">
+          <h2>Practice · your try</h2>
+          <p>must finish first</p>
+        </div>
+        <p class="stem">Which TWO have the SAME or OPPOSITE meaning?</p>
+        <div class="pair-board">
+          <button type="button" class="pair-object is-hidden" id="try-object"></button>
+          <div class="word-grid" id="try-choices">
+            <button type="button" class="word-pick" data-letter="A" data-word="loud"><small>A</small>loud</button>
+            <button type="button" class="word-pick" data-letter="B" data-word="river"><small>B</small>river</button>
+            <button type="button" class="word-pick" data-letter="C" data-word="quiet"><small>C</small>quiet</button>
+            <button type="button" class="word-pick" data-letter="D" data-word="chair"><small>D</small>chair</button>
+          </div>
+        </div>
+        <button type="button" class="cta practice-next" id="try-next" disabled>
+          Start Item 01
+        </button>
+      </section>
+
+      <section class="sheet item-sheet is-hidden" id="live" hidden>
+        <div class="sheet-head">
+          <h2>Item 01</h2>
+          <p>one pair</p>
+        </div>
+        <p class="stem">Which TWO have the SAME or OPPOSITE meaning?</p>
+        <div class="pair-board">
+          <button type="button" class="pair-object is-hidden" id="live-object"></button>
+          <div class="word-grid" id="live-choices">
+            <button type="button" class="word-pick" data-letter="A" data-word="silent"><small>A</small>silent</button>
+            <button type="button" class="word-pick" data-letter="B" data-word="hammer"><small>B</small>hammer</button>
+            <button type="button" class="word-pick" data-letter="C" data-word="quiet"><small>C</small>quiet</button>
+            <button type="button" class="word-pick" data-letter="D" data-word="window"><small>D</small>window</button>
+          </div>
+        </div>
+        <button type="button" class="cta practice-next" id="part-next" disabled>
+          Next part
+        </button>
+      </section>
+
+      <p class="page-foot">
+        <span class="keep">one sitting · power part</span>
+      </p>
+    </main>
+    <script src="js/part2.js"></script>
+  </body>
+</html>

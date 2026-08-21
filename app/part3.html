@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Three-Dimensional Space · JobTest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="phone power" data-beat="walk">
+      <div class="kicker-row">
+        <p class="kicker teal">One sitting</p>
+        <p class="kicker muted">Part 3 of 6</p>
+      </div>
+      <h1 class="display title-power">In space</h1>
+      <p class="lede light power-lede">
+        Three-Dimensional Space. Invented demo — not an official AP item.
+      </p>
+      <p class="badge teal demo-chip">Demo items, not the O*NET Ability Profiler.</p>
+      <p class="score-quiet">Answer every item. No wrong-answer penalty.</p>
+
+      <section class="sheet item-sheet" id="walk">
+        <div class="sheet-head">
+          <h2>Practice · walked</h2>
+          <p>fold idea</p>
+        </div>
+        <p class="stem">Bend on the dashed line. This 2-D form makes figure A.</p>
+        <div class="space-prompt" aria-hidden="true">
+          <svg viewBox="0 0 120 72" class="space-svg">
+            <rect x="14" y="18" width="44" height="36" fill="#0b1220" />
+            <rect x="58" y="18" width="44" height="36" fill="#2a354c" />
+            <line x1="58" y1="16" x2="58" y2="56" stroke="#12d4c4" stroke-width="2" stroke-dasharray="4 3" />
+            <polygon points="72,10 86,18 72,26" fill="#12d4c4" />
+          </svg>
+        </div>
+        <div class="choices" aria-hidden="true">
+          <button type="button" class="choice fig-row is-on" disabled>
+            <span>A</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="20,18 48,10 48,52 20,60" fill="#0b1220" />
+              <polygon points="48,10 76,18 76,60 48,52" fill="#2a354c" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig-row" disabled>
+            <span>B</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="22,28 45,14 68,28 45,42" fill="#12d4c4" />
+              <polygon points="22,28 45,42 45,62 22,48" fill="#0b1220" />
+              <polygon points="45,42 68,28 68,48 45,62" fill="#2a354c" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig-row" disabled>
+            <span>C</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <ellipse cx="45" cy="22" rx="22" ry="8" fill="#8b93a7" />
+              <rect x="23" y="22" width="44" height="28" fill="#2a354c" />
+              <ellipse cx="45" cy="50" rx="22" ry="8" fill="#0b1220" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig-row" disabled>
+            <span>D</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="24,54 45,16 66,54" fill="#0b1220" />
+              <polygon points="45,16 66,54 72,48 52,14" fill="#2a354c" />
+              <ellipse cx="45" cy="54" rx="22" ry="6" fill="#8b93a7" />
+            </svg>
+          </button>
+        </div>
+        <button type="button" class="cta" id="walk-next">Try one fold</button>
+      </section>
+
+      <section class="sheet item-sheet is-hidden" id="try" hidden>
+        <div class="sheet-head">
+          <h2>Practice · your try</h2>
+          <p>must finish first</p>
+        </div>
+        <p class="stem">Which ONE of FOUR 3-D figures can this form make?</p>
+        <div class="space-prompt" aria-hidden="true">
+          <svg viewBox="0 0 140 70" class="space-svg">
+            <rect x="12" y="22" width="36" height="26" fill="#0b1220" />
+            <rect x="48" y="22" width="36" height="26" fill="#2a354c" />
+            <rect x="84" y="22" width="36" height="26" fill="#0b1220" />
+            <line x1="48" y1="20" x2="48" y2="50" stroke="#12d4c4" stroke-width="2" stroke-dasharray="4 3" />
+            <line x1="84" y1="20" x2="84" y2="50" stroke="#12d4c4" stroke-width="2" stroke-dasharray="4 3" />
+          </svg>
+        </div>
+        <div class="choices" id="try-choices">
+          <button type="button" class="choice fig-row">
+            <span>A</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="22,28 45,14 68,28 45,42" fill="#12d4c4" />
+              <polygon points="22,28 45,42 45,62 22,48" fill="#0b1220" />
+              <polygon points="45,42 68,28 68,48 45,62" fill="#2a354c" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig-row">
+            <span>B</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="18,20 36,12 36,50 18,58" fill="#0b1220" />
+              <polygon points="36,12 54,20 54,58 36,50" fill="#12d4c4" />
+              <polygon points="54,20 72,12 72,50 54,58" fill="#2a354c" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig-row">
+            <span>C</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <ellipse cx="45" cy="22" rx="20" ry="7" fill="#8b93a7" />
+              <rect x="25" y="22" width="40" height="26" fill="#2a354c" />
+              <ellipse cx="45" cy="48" rx="20" ry="7" fill="#0b1220" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig-row">
+            <span>D</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="24,54 45,16 66,54" fill="#0b1220" />
+              <polygon points="45,16 66,54 72,48 52,14" fill="#2a354c" />
+              <ellipse cx="45" cy="54" rx="22" ry="6" fill="#8b93a7" />
+            </svg>
+          </button>
+        </div>
+        <button type="button" class="cta practice-next" id="try-next" disabled>
+          Start Item 01
+        </button>
+      </section>
+
+      <section class="sheet item-sheet is-hidden" id="live" hidden>
+        <div class="sheet-head">
+          <h2>Item 01</h2>
+          <p>tap one figure</p>
+        </div>
+        <p class="stem">Which ONE of FOUR 3-D figures can this 2-D form make?</p>
+        <div class="space-prompt" aria-hidden="true">
+          <svg viewBox="0 0 120 90" class="space-svg">
+            <rect x="42" y="10" width="28" height="24" fill="#0b1220" />
+            <rect x="14" y="34" width="28" height="24" fill="#2a354c" />
+            <rect x="42" y="34" width="28" height="24" fill="#0b1220" />
+            <rect x="70" y="34" width="28" height="24" fill="#2a354c" />
+            <line x1="42" y1="34" x2="70" y2="34" stroke="#12d4c4" stroke-width="2" stroke-dasharray="4 3" />
+            <line x1="42" y1="34" x2="42" y2="58" stroke="#12d4c4" stroke-width="2" stroke-dasharray="4 3" />
+            <line x1="70" y1="34" x2="70" y2="58" stroke="#12d4c4" stroke-width="2" stroke-dasharray="4 3" />
+          </svg>
+        </div>
+        <div class="choices" id="choices">
+          <button type="button" class="choice fig-row">
+            <span>A</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <ellipse cx="45" cy="22" rx="20" ry="7" fill="#8b93a7" />
+              <rect x="25" y="22" width="40" height="26" fill="#2a354c" />
+              <ellipse cx="45" cy="48" rx="20" ry="7" fill="#0b1220" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig-row">
+            <span>B</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="22,28 45,14 68,28 45,42" fill="#12d4c4" />
+              <polygon points="22,28 45,42 45,62 22,48" fill="#0b1220" />
+              <polygon points="45,42 68,28 68,48 45,62" fill="#2a354c" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig-row">
+            <span>C</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="20,18 48,10 48,52 20,60" fill="#0b1220" />
+              <polygon points="48,10 76,18 76,60 48,52" fill="#2a354c" />
+            </svg>
+          </button>
+          <button type="button" class="choice fig-row">
+            <span>D</span>
+            <svg viewBox="0 0 90 70" class="space-svg">
+              <polygon points="18,20 36,12 36,50 18,58" fill="#0b1220" />
+              <polygon points="36,12 54,20 54,58 36,50" fill="#12d4c4" />
+              <polygon points="54,20 72,12 72,50 54,58" fill="#2a354c" />
+            </svg>
+          </button>
+        </div>
+        <button type="button" class="cta practice-next" id="part-next" disabled>
+          Next part
+        </button>
+      </section>
+
+      <p class="page-foot">
+        <span class="keep">one sitting · power part</span>
+      </p>
+    </main>
+    <script src="js/part3.js"></script>
+  </body>
+</html>

@@ -13,36 +13,68 @@
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-    <main class="phone sitting">
-      <p class="sticker">JobTest sitting plan, not official AP admin</p>
+    <main class="phone sitting speed-grid" data-beat="walk">
       <div class="kicker-row">
         <p class="kicker teal" data-sitting>One sitting</p>
         <p class="kicker muted">Part 5 of 6</p>
       </div>
       <h1 class="display title-grid">Same / Different</h1>
-      <div class="clock-row">
-        <p class="clock" id="clock">5:12</p>
+      <p class="lede light">Name Comparison. Invented demo — not an official AP item.</p>
+      <p class="badge teal demo-chip">Demo items, not the O*NET Ability Profiler.</p>
+      <div class="clock-row" id="clock-row" hidden>
+        <p class="clock" id="clock">6:00</p>
         <p class="clock-note">after the break</p>
       </div>
-      <div class="pips decor" aria-hidden="true">
-        <i class="pip lime"></i><i class="pip"></i><i class="pip teal"></i><i class="pip lime"></i>
-        <i class="pip"></i><i class="pip lime"></i><i class="pip"></i><i class="pip teal"></i>
-        <i class="pip teal"></i><i class="pip lime"></i><i class="pip"></i><i class="pip lime"></i>
-        <i class="pip"></i><i class="pip teal"></i><i class="pip lime"></i><i class="pip"></i>
-        <i class="pip lime"></i><i class="pip"></i><i class="pip"></i><i class="pip teal"></i>
-        <i class="pip"></i><i class="pip lime"></i><i class="pip teal"></i><i class="pip lime"></i>
-      </div>
-      <section class="sheet scroll">
+      <p class="score-quiet">+1 correct. −1 per wrong. Skip if no idea. Meaning does not matter.</p>
+
+      <section class="sheet item-sheet" id="walk">
+        <div class="sheet-head">
+          <h2>Practice · walked</h2>
+          <p>same names</p>
+        </div>
+        <div class="row">
+          <span class="idx">P1</span>
+          <p class="pair">Kite Harbor Prints — Kite Harbor Prints</p>
+          <div class="cells">
+            <button type="button" class="cell same is-on" disabled>SAME</button>
+            <button type="button" class="cell diff" disabled>DIFF</button>
+          </div>
+        </div>
+        <p class="pair-line">These two names are the same · SAME</p>
+        <button type="button" class="cta" id="walk-next">Try one pair</button>
+      </section>
+
+      <section class="sheet item-sheet is-hidden" id="try" hidden>
+        <div class="sheet-head">
+          <h2>Practice · your try</h2>
+          <p>must finish first</p>
+        </div>
+        <div class="row" id="try-row">
+          <span class="idx">P2</span>
+          <p class="pair">Vellum Oak Bindery — Vellum Oak Bindry</p>
+          <div class="cells">
+            <button type="button" class="cell same">SAME</button>
+            <button type="button" class="cell diff">DIFF</button>
+          </div>
+        </div>
+        <button type="button" class="cta practice-next" id="try-next" disabled>
+          Start the sheet
+        </button>
+      </section>
+
+      <section class="sheet scroll" id="grid" hidden>
         <div class="sheet-head">
           <h2>Name Comparison</h2>
           <p>tap Same or Diff</p>
         </div>
         <div class="rows" id="rows"></div>
       </section>
+
       <div class="page-foot">
         <p class="keep">one sitting · keep going</p>
-        <p class="more">↓ more below</p>
+        <p class="more" id="foot-more">practice first</p>
       </div>
+      <a class="cta sit-next is-hidden" id="part-next" hidden href="part6.html">Next part</a>
     </main>
     <script src="js/names.js"></script>
     <script src="js/part5.js"></script>
