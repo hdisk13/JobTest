@@ -75,6 +75,46 @@ button {
   color: var(--muted);
 }
 
+.sit-rail {
+  display: flex;
+  align-items: baseline;
+  gap: 0.62em;
+  margin: 8px 0 0;
+  padding: 0;
+  color: #8b93a7;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.sit-rail .is-done {
+  color: #12d4c4;
+  opacity: 0.4;
+}
+
+.sit-rail .is-now {
+  color: #12d4c4;
+}
+
+.sit-rail .is-later {
+  color: #8b93a7;
+}
+
+.wait-line {
+  margin: 8px 0 0;
+  color: #f4f0e6;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.phone[data-beat="walk"] .wait-line,
+.phone[data-beat="try"] .wait-line,
+.phone[data-beat="practice"] .wait-line {
+  display: none;
+}
+
 .display {
   margin: 10px 0 0;
   font-family: var(--font-display);
@@ -1058,6 +1098,10 @@ button {
   font-weight: 600;
 }
 
+.break-stay + .break-stay {
+  margin-top: 6px;
+}
+
 .badge.demo-chip {
   display: inline-flex;
   width: auto;
@@ -1096,9 +1140,11 @@ button {
 }
 
 .speed-grid .kicker-row,
+.speed-grid .sit-rail,
 .speed-grid .title-grid,
 .speed-grid .demo-chip,
 .speed-grid .clock-row,
+.speed-grid .wait-line,
 .speed-grid .speed-chip,
 .speed-grid .score-quiet,
 .speed-grid .page-foot,
