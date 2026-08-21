@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Object Matching · JobTest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="phone sitting speed-grid" data-beat="walk">
+      <div class="kicker-row">
+        <p class="kicker teal">One sitting</p>
+        <p class="kicker muted">Part 6 of 6</p>
+      </div>
+      <h1 class="display title-grid">Find the copy</h1>
+      <p class="badge teal demo-chip">Demo items, not the O*NET Ability Profiler.</p>
+      <div class="clock-row" id="clock-row" hidden>
+        <p class="clock" id="clock">5:00</p>
+      </div>
+      <p class="speed-chip">you will not finish · slight idea → guess · no idea → skip</p>
+      <p class="score-quiet">+1 correct. Lose one third (1/3) per wrong. Blanks not penalized.</p>
+
+      <section class="sheet item-sheet" id="walk">
+        <div class="sheet-head">
+          <h2>Practice · walked</h2>
+          <p>P1 duplicate</p>
+        </div>
+        <p class="stem">Which ONE of FOUR is the exact duplicate?</p>
+        <div class="match-practice">
+          <div class="match-stem" aria-hidden="true">
+            <svg viewBox="0 0 80 64" class="match-svg">
+              <rect x="18" y="14" width="44" height="36" fill="#0b1220" />
+              <rect x="22" y="18" width="36" height="28" fill="#f4f0e6" />
+              <circle cx="32" cy="32" r="5" fill="#12d4c4" />
+            </svg>
+          </div>
+          <div class="match-cells" aria-hidden="true">
+            <button type="button" class="match-cell is-on" disabled>
+              <small>A</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <rect x="18" y="14" width="44" height="36" fill="#0b1220" />
+                <rect x="22" y="18" width="36" height="28" fill="#f4f0e6" />
+                <circle cx="32" cy="32" r="5" fill="#12d4c4" />
+              </svg>
+            </button>
+            <button type="button" class="match-cell" disabled>
+              <small>B</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <rect x="18" y="14" width="44" height="36" fill="#0b1220" />
+                <rect x="22" y="18" width="36" height="28" fill="#f4f0e6" />
+                <circle cx="50" cy="32" r="5" fill="#12d4c4" />
+              </svg>
+            </button>
+            <button type="button" class="match-cell" disabled>
+              <small>C</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <rect x="18" y="14" width="44" height="36" fill="#0b1220" />
+                <rect x="22" y="18" width="36" height="28" fill="#f4f0e6" />
+                <circle cx="32" cy="32" r="5" fill="#12d4c4" />
+                <circle cx="48" cy="32" r="5" fill="#8b93a7" />
+              </svg>
+            </button>
+            <button type="button" class="match-cell" disabled>
+              <small>D</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <rect x="18" y="14" width="44" height="36" fill="#0b1220" />
+                <rect x="22" y="30" width="36" height="12" fill="#2a354c" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="pair-line">A is the exact duplicate.</p>
+        <button type="button" class="cta" id="walk-next">Try one match</button>
+      </section>
+
+      <section class="sheet item-sheet is-hidden" id="try" hidden>
+        <div class="sheet-head">
+          <h2>Practice · your try</h2>
+          <p>must finish first</p>
+        </div>
+        <p class="stem">Which ONE of FOUR is the exact duplicate?</p>
+        <div class="match-practice">
+          <div class="match-stem" aria-hidden="true">
+            <svg viewBox="0 0 80 64" class="match-svg">
+              <rect x="16" y="12" width="14" height="40" fill="#0b1220" />
+              <rect x="16" y="38" width="36" height="14" fill="#2a354c" />
+            </svg>
+          </div>
+          <div class="match-cells" id="try-choices">
+            <button type="button" class="match-cell">
+              <small>A</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <rect x="16" y="12" width="14" height="40" fill="#0b1220" />
+                <rect x="16" y="12" width="36" height="14" fill="#2a354c" />
+              </svg>
+            </button>
+            <button type="button" class="match-cell">
+              <small>B</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <rect x="16" y="12" width="14" height="28" fill="#0b1220" />
+                <rect x="16" y="38" width="36" height="14" fill="#2a354c" />
+              </svg>
+            </button>
+            <button type="button" class="match-cell">
+              <small>C</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <rect x="16" y="12" width="14" height="40" fill="#0b1220" />
+                <rect x="16" y="38" width="36" height="14" fill="#2a354c" />
+              </svg>
+            </button>
+            <button type="button" class="match-cell">
+              <small>D</small>
+              <svg viewBox="0 0 80 64" class="match-svg">
+                <rect x="16" y="12" width="14" height="40" fill="#0b1220" />
+                <rect x="30" y="38" width="36" height="14" fill="#2a354c" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <button type="button" class="cta practice-next" id="try-next" disabled>
+          Start the sheet
+        </button>
+      </section>
+
+      <section class="sheet scroll" id="grid" hidden>
+        <div class="sheet-head">
+          <h2>Object Matching</h2>
+          <p>42 items · exact copy</p>
+        </div>
+        <div class="rows" id="rows"></div>
+      </section>
+
+      <div class="page-foot">
+        <p class="keep">one sitting · exact match</p>
+        <p class="more" id="foot-more">practice first</p>
+      </div>
+      <a class="cta sit-next is-hidden" id="part-next" hidden href="mix.html">Next part</a>
+    </main>
+    <script src="js/objects.js"></script>
+    <script src="js/part6.js"></script>
+  </body>
+</html>

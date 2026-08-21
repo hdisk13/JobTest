@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arithmetic Reasoning · JobTest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="phone power" data-beat="practice">
+      <div class="kicker-row">
+        <p class="kicker teal">One sitting</p>
+        <p class="kicker muted">Part 1 of 6</p>
+      </div>
+      <h1 class="display title-power">Word problem</h1>
+      <p class="lede light power-lede">
+        Arithmetic Reasoning. Invented demo — not an official AP item.
+      </p>
+      <p class="score-quiet">Answer every item. No wrong-answer penalty.</p>
+
+      <section class="sheet item-sheet" id="practice">
+        <div class="sheet-head">
+          <h2>Practice</h2>
+          <p>must finish first</p>
+        </div>
+        <p class="practice-note">
+          Official practice cannot be skipped. This is an invented demo, not an
+          official AP practice item.
+        </p>
+        <p class="stem">
+          A bus holds 8 people. How many people can 2 buses hold?
+        </p>
+        <div class="choices" id="practice-choices">
+          <button type="button" class="choice">A · 8</button>
+          <button type="button" class="choice">B · 10</button>
+          <button type="button" class="choice">C · 16</button>
+          <button type="button" class="choice">D · 18</button>
+          <button type="button" class="choice">E · none of these</button>
+        </div>
+        <button type="button" class="cta practice-next" id="practice-next" disabled>
+          Start Item 01
+        </button>
+      </section>
+
+      <section class="sheet item-sheet is-hidden" id="live" hidden>
+        <div class="sheet-head">
+          <h2>Item 01</h2>
+          <p>tap one answer</p>
+        </div>
+        <p class="stem">
+          Nia buys 4 notebooks at $3 each and pays with a $20 bill. How much
+          change should she get?
+        </p>
+        <div class="choices" id="choices">
+          <button type="button" class="choice">A · $6</button>
+          <button type="button" class="choice">B · $8</button>
+          <button type="button" class="choice">C · $12</button>
+          <button type="button" class="choice">D · $16</button>
+          <button type="button" class="choice">E · none of these</button>
+        </div>
+        <button type="button" class="cta practice-next" id="part-next" disabled>
+          Next part
+        </button>
+      </section>
+
+      <p class="page-foot">
+        <span class="keep">one sitting · power part</span>
+      </p>
+    </main>
+    <script src="js/part1.js"></script>
+  </body>
+</html>
