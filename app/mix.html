@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your mix · JobTest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <main class="phone">
+      <p class="kicker teal">Character sheet</p>
+      <h1 class="display title-mix">Your mix</h1>
+      <p class="lede light">
+        Six official abilities. Typical is 100. Not a ranking of people.
+      </p>
+      <p class="badge teal sample-tag">Sample data</p>
+
+      <section class="abilities">
+        <article class="ability">
+          <div>
+            <h3>Verbal Ability</h3>
+            <p>Words, meaning, reading</p>
+          </div>
+          <div class="score-col">
+            <div class="score">108</div>
+            <span>100/20</span>
+          </div>
+          <div class="bar"><span style="width: 60%"></span></div>
+        </article>
+        <article class="ability">
+          <div>
+            <h3>Arithmetic Reasoning</h3>
+            <p>Word problems, number logic</p>
+          </div>
+          <div class="score-col">
+            <div class="score">94</div>
+            <span>100/20</span>
+          </div>
+          <div class="bar"><span style="width: 43%"></span></div>
+        </article>
+        <article class="ability">
+          <div>
+            <h3>Computation</h3>
+            <p>Fast, accurate arithmetic</p>
+          </div>
+          <div class="score-col">
+            <div class="score lime">116</div>
+            <span>100/20</span>
+          </div>
+          <div class="bar lime"><span style="width: 70%"></span></div>
+        </article>
+        <article class="ability">
+          <div>
+            <h3>Spatial Ability</h3>
+            <p>Rotate, fold, picture in 3D</p>
+          </div>
+          <div class="score-col">
+            <div class="score">88</div>
+            <span>100/20</span>
+          </div>
+          <div class="bar"><span style="width: 35%"></span></div>
+        </article>
+        <article class="ability">
+          <div>
+            <h3>Form Perception</h3>
+            <p>Spot small visual differences</p>
+          </div>
+          <div class="score-col">
+            <div class="score">102</div>
+            <span>100/20</span>
+          </div>
+          <div class="bar"><span style="width: 53%"></span></div>
+        </article>
+        <article class="ability">
+          <div>
+            <h3>Clerical Perception</h3>
+            <p>Catch copy errors fast</p>
+          </div>
+          <div class="score-col">
+            <div class="score teal">124</div>
+            <span>100/20</span>
+          </div>
+          <div class="bar teal"><span style="width: 80%"></span></div>
+        </article>
+      </section>
+
+      <section class="section jobs" id="jobs" data-horizon="future">
+        <div class="jobs-head">
+          <h2 class="display title-jobs">Jobs that use your mix</h2>
+          <div class="horizon" role="tablist">
+            <button type="button" data-horizon="current">
+              Current
+              <small>now-ish prep</small>
+            </button>
+            <button type="button" class="is-on" data-horizon="future">
+              Future
+              <small>more school</small>
+            </button>
+          </div>
+        </div>
+
+        <div class="bucket">
+          <div class="bucket-head">
+            <p>Job Zone 1–2</p>
+            <span>very little to some prep</span>
+          </div>
+          <article class="job paper-job">
+            <div>
+              <strong>Retail sales</strong>
+              <p>Verbal + clerical — talk, tally, keep the floor moving.</p>
+            </div>
+            <span class="badge teal">Example</span>
+          </article>
+        </div>
+
+        <div class="bucket">
+          <div class="bucket-head">
+            <p>Job Zone 3</p>
+            <span>medium prep</span>
+          </div>
+          <article class="job paper-job">
+            <div>
+              <strong>Medical records tech</strong>
+              <p>Clerical + verbal — keep files exact.</p>
+              <p class="start-with">People often start by …</p>
+              <div class="cert-chip">
+                <span class="cert-kind">Program</span>
+                <strong>Postsecondary medical-records certificate</strong>
+                <span class="cert-note">lookup the title</span>
+              </div>
+            </div>
+            <span class="badge teal">Example</span>
+          </article>
+          <article class="job paper-job">
+            <div>
+              <strong>Bookkeeping clerk</strong>
+              <p>Computation + clerical — catch the off-by-one.</p>
+              <p class="start-with">People often start by …</p>
+              <div class="cert-chip">
+                <span class="cert-kind">Class</span>
+                <strong>College accounting courses</strong>
+                <span class="cert-note">community college</span>
+              </div>
+            </div>
+            <span class="badge teal">Example</span>
+          </article>
+        </div>
+
+        <div class="bucket">
+          <div class="bucket-head">
+            <p>Job Zone 4</p>
+            <span>more school</span>
+          </div>
+          <article class="job paper-job">
+            <div>
+              <strong>Operations analyst</strong>
+              <p>Reasoning + computation — model the messy parts.</p>
+            </div>
+            <span class="badge teal">Example</span>
+          </article>
+          <article class="job paper-job">
+            <div>
+              <strong>Cloud support</strong>
+              <p>Reasoning + clerical — keep the lights on in someone else’s cloud.</p>
+            </div>
+            <span class="badge teal">Example</span>
+          </article>
+        </div>
+
+        <div class="bucket">
+          <div class="bucket-head">
+            <p>Job Zone 5</p>
+            <span>long prep</span>
+          </div>
+          <article class="job paper-job">
+            <div>
+              <strong>Archivist</strong>
+              <p>Verbal + clerical — organize what lasts.</p>
+            </div>
+            <span class="badge teal">Example</span>
+          </article>
+        </div>
+      </section>
+
+      <div class="notes">
+        <aside class="note lime">
+          <strong>This is for exploring, not for getting hired</strong>
+          <p>
+            Do not use these results for hiring, placement, or promotion. They
+            are a practice snapshot, not a credential.
+          </p>
+        </aside>
+        <aside class="note dash">
+          <strong>Not official AP percentiles</strong>
+          <p>
+            These are converted 100/20 sample scores, not official Ability
+            Profiler percentiles.
+          </p>
+        </aside>
+        <aside class="note dash">
+          <strong>We only measured 6 of 9 abilities</strong>
+          <p>
+            No pegboard, mark-making, or finger dexterity on a phone. Motor
+            parts are missing from this mix.
+          </p>
+        </aside>
+      </div>
+      <a class="ghost" href="index.html">Back to launch</a>
+    </main>
+    <script src="js/mix.js"></script>
+  </body>
+</html>
